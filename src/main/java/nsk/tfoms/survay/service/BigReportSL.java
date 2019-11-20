@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,11 +14,16 @@ import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Properties;
+import java.util.Scanner;
+import java.util.Set;
 
 import javax.servlet.ServletContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 
 import net.sf.jasperreports.engine.JRException;
@@ -97,7 +103,7 @@ public class BigReportSL {
 		List<String> lpuList = paramtwopart.getAns();
 		String lpu = "";
 		String lpu_header = "";
-		if(lpuList.contains("пїЅпїЅпїЅ")){
+		if(lpuList.contains("Все")){
 			File file = new File( servletContext.getRealPath("/WEB-INF/mo.txt"));
 			DataInputStream in = new DataInputStream(new FileInputStream(file));
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -110,7 +116,7 @@ public class BigReportSL {
 					lpu_header = lpu_header + vr.substring(2);
 					
 				}
-			mapReport.put("lpu_header", "пїЅпїЅпїЅ");
+			mapReport.put("lpu_header", "Все");
 			mapReport.put("lpu", lpu);
 			
 		}else{
@@ -137,10 +143,10 @@ public class BigReportSL {
 		
 		
 		for(int i=0; i< list_ansAaS.size(); i++){
-			if (list_ansAaS.get(i).equals("1")){sex_man1 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"; age_man1 = "59"; }
-			if (list_ansAaS.get(i).equals("2")){sex_gerl1 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"; age_gerl1 = "54"; }
-			if (list_ansAaS.get(i).equals("3")){sex_man2 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"; age_man2 = "60";}
-			if (list_ansAaS.get(i).equals("4")){sex_gerl2 = "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ"; age_gerl2 = "55";}
+			if (list_ansAaS.get(i).equals("1")){sex_man1 = "Мужской"; age_man1 = "59"; }
+			if (list_ansAaS.get(i).equals("2")){sex_gerl1 = "Женский"; age_gerl1 = "54"; }
+			if (list_ansAaS.get(i).equals("3")){sex_man2 = "Мужской"; age_man2 = "60";}
+			if (list_ansAaS.get(i).equals("4")){sex_gerl2 = "Женский"; age_gerl2 = "55";}
 		}
 			
 		
