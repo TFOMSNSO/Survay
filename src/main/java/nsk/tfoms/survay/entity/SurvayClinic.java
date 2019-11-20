@@ -299,17 +299,17 @@ public class SurvayClinic implements Serializable {
 		{
 	    	int col = 0;
 	    	
-	    	if(getClinicDoctor().equals("Удовлетворен(а)") || getClinicDoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getDiagnosticTests().equals("Удовлетворен(а)") || getDiagnosticTests().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getEquipment().equals("Удовлетворен(а)") || getEquipment().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getFreeHelp().equals("Удовлетворен(а)") || getFreeHelp().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getLaboratoryResearch().equals("Удовлетворен(а)") || getLaboratoryResearch().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getMedicalSpecialists().equals("Удовлетворен(а)") || getMedicalSpecialists().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getRepairs().equals("Удовлетворен(а)") || getRepairs().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getSeeADoctor().equals("Удовлетворен(а)") || getSeeADoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getTherapist().equals("Удовлетворен(а)") || getTherapist().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getWaitingTime().equals("Удовлетворен(а)") || getWaitingTime().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
-	    	if(getWaitingTime2().equals("Удовлетворен(а)") || getWaitingTime2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)")) col = col +1 ;
+	    	if(getClinicDoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getClinicDoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getDiagnosticTests().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getDiagnosticTests().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getEquipment().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getEquipment().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getFreeHelp().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getFreeHelp().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getLaboratoryResearch().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getLaboratoryResearch().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getMedicalSpecialists().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getMedicalSpecialists().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getRepairs().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getRepairs().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getSeeADoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getSeeADoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getTherapist().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getTherapist().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getWaitingTime().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getWaitingTime().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
+	    	if(getWaitingTime2().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)") || getWaitingTime2().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)")) col = col +1 ;
 	    	
 	    	return col;
 		}

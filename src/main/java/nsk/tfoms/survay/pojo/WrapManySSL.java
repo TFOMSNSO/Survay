@@ -67,9 +67,9 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question23");
-		if(!getQuestionS23many_1().equals("пусто")) ls.add(getQuestionS23many_1());
-		if(!getQuestionS23many_2().equals("пусто")) ls.add(getQuestionS23many_2());
-		if(!getQuestionS23many_3().equals("пусто")) ls.add(getQuestionS23many_3());
+		if(!getQuestionS23many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS23many_1());
+		if(!getQuestionS23many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS23many_2());
+		if(!getQuestionS23many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS23many_3());
 		
 		return ls;
 	}
@@ -79,12 +79,12 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question21");
-		if(!getQuestionS21many_1().equals("пусто")) ls.add(getQuestionS21many_1());
-		if(!getQuestionS21many_2().equals("пусто")) ls.add(getQuestionS21many_2());
-		if(!getQuestionS21many_3().equals("пусто")) ls.add(getQuestionS21many_3());
-		if(!getQuestionS21many_4().equals("пусто")) ls.add(getQuestionS21many_4());
-		if(!getQuestionS21many_5().equals("пусто")) ls.add(getQuestionS21many_5());
-		if(!getQuestionS21many_6().equals("пусто")) ls.add(getQuestionS21many_6());
+		if(!getQuestionS21many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_1());
+		if(!getQuestionS21many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_2());
+		if(!getQuestionS21many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_3());
+		if(!getQuestionS21many_4().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_4());
+		if(!getQuestionS21many_5().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_5());
+		if(!getQuestionS21many_6().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS21many_6());
 		
 		return ls;
 	}
@@ -94,9 +94,9 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question20");
-		if(!getQuestionS20many_1().equals("пусто")) ls.add(getQuestionS20many_1());
-		if(!getQuestionS20many_2().equals("пусто")) ls.add(getQuestionS20many_2());
-		if(!getQuestionS20many_3().equals("пусто")) ls.add(getQuestionS20many_3());
+		if(!getQuestionS20many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS20many_1());
+		if(!getQuestionS20many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS20many_2());
+		if(!getQuestionS20many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS20many_3());
 		
 		return ls;
 	}
@@ -106,16 +106,16 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question13");
-		if(!getQuestionS13many_1().equals("пусто")) ls.add(getQuestionS13many_1());
-		if(!getQuestionS13many_2().equals("пусто")) ls.add(getQuestionS13many_2());
-		if(!getQuestionS13many_3().equals("пусто")) ls.add(getQuestionS13many_3());
-		if(!getQuestionS13many_4().equals("пусто")) ls.add(getQuestionS13many_4());
-		if(!getQuestionS13many_5().equals("пусто")) ls.add(getQuestionS13many_5());
-		if(!getQuestionS13many_6().equals("пусто")) ls.add(getQuestionS13many_6());
-		if(!getQuestionS13many_7().equals("пусто")) ls.add(getQuestionS13many_7());
-		if(!getQuestionS13many_8().equals("пусто")) ls.add(getQuestionS13many_8());
-		if(!getQuestionS13many_9().equals("пусто")) ls.add(getQuestionS13many_9());
-		if(!getQuestionS13many_10().equals("пусто")) ls.add(getQuestionS13many_10());
+		if(!getQuestionS13many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_1());
+		if(!getQuestionS13many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_2());
+		if(!getQuestionS13many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_3());
+		if(!getQuestionS13many_4().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_4());
+		if(!getQuestionS13many_5().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_5());
+		if(!getQuestionS13many_6().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_6());
+		if(!getQuestionS13many_7().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_7());
+		if(!getQuestionS13many_8().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_8());
+		if(!getQuestionS13many_9().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_9());
+		if(!getQuestionS13many_10().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS13many_10());
 		
 		return ls;
 	}
@@ -125,13 +125,13 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question15");
-		if(!getQuestionS15many_1().equals("пусто")) ls.add(getQuestionS15many_1());
-		if(!getQuestionS15many_2().equals("пусто")) ls.add(getQuestionS15many_2());
-		if(!getQuestionS15many_3().equals("пусто")) ls.add(getQuestionS15many_3());
-		if(!getQuestionS15many_4().equals("пусто")) ls.add(getQuestionS15many_4());
-		if(!getQuestionS15many_5().equals("пусто")) ls.add(getQuestionS15many_5());
-		if(!getQuestionS15many_6().equals("пусто")) ls.add(getQuestionS15many_6());
-		if(!getQuestionS15many_7().equals("пусто")) ls.add(getQuestionS15many_7());
+		if(!getQuestionS15many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_1());
+		if(!getQuestionS15many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_2());
+		if(!getQuestionS15many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_3());
+		if(!getQuestionS15many_4().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_4());
+		if(!getQuestionS15many_5().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_5());
+		if(!getQuestionS15many_6().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_6());
+		if(!getQuestionS15many_7().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS15many_7());
 		
 		return ls;
 	}
@@ -141,11 +141,11 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question17");
-		if(!getQuestionS17many_1().equals("пусто")) ls.add(getQuestionS17many_1());
-		if(!getQuestionS17many_2().equals("пусто")) ls.add(getQuestionS17many_2());
-		if(!getQuestionS17many_3().equals("пусто")) ls.add(getQuestionS17many_3());
-		if(!getQuestionS17many_4().equals("пусто")) ls.add(getQuestionS17many_4());
-		if(!getQuestionS17many_5().equals("пусто")) ls.add(getQuestionS17many_5());
+		if(!getQuestionS17many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS17many_1());
+		if(!getQuestionS17many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS17many_2());
+		if(!getQuestionS17many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS17many_3());
+		if(!getQuestionS17many_4().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS17many_4());
+		if(!getQuestionS17many_5().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS17many_5());
 		
 		return ls;
 	}
@@ -155,14 +155,14 @@ public class WrapManySSL {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question18");
-		if(!getQuestionS18many_1().equals("пусто")) ls.add(getQuestionS18many_1());
-		if(!getQuestionS18many_2().equals("пусто")) ls.add(getQuestionS18many_2());
-		if(!getQuestionS18many_3().equals("пусто")) ls.add(getQuestionS18many_3());
-		if(!getQuestionS18many_4().equals("пусто")) ls.add(getQuestionS18many_4());
-		if(!getQuestionS18many_5().equals("пусто")) ls.add(getQuestionS18many_5());
-		if(!getQuestionS18many_6().equals("пусто")) ls.add(getQuestionS18many_6());
-		if(!getQuestionS18many_7().equals("пусто")) ls.add(getQuestionS18many_7());
-		if(!getQuestionS18many_8().equals("пусто")) ls.add(getQuestionS18many_8());
+		if(!getQuestionS18many_1().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_1());
+		if(!getQuestionS18many_2().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_2());
+		if(!getQuestionS18many_3().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_3());
+		if(!getQuestionS18many_4().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_4());
+		if(!getQuestionS18many_5().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_5());
+		if(!getQuestionS18many_6().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_6());
+		if(!getQuestionS18many_7().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_7());
+		if(!getQuestionS18many_8().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestionS18many_8());
 		
 		return ls;
 	}

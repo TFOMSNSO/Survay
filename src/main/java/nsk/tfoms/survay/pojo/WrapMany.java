@@ -87,12 +87,12 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question32");
-		if(!getQuestion32_1_clinic().equals("пусто")) ls.add(getQuestion32_1_clinic());
-		if(!getQuestion32_2_clinic().equals("пусто")) ls.add(getQuestion32_2_clinic());
-		if(!getQuestion32_3_clinic().equals("пусто")) ls.add(getQuestion32_3_clinic());
-		if(!getQuestion32_4_clinic().equals("пусто")) ls.add(getQuestion32_4_clinic());
-		if(!getQuestion32_5_clinic().equals("пусто")) ls.add(getQuestion32_5_clinic());
-		if(!getQuestion32_6_clinic().equals("пусто")) ls.add(getQuestion32_6_clinic());
+		if(!getQuestion32_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_1_clinic());
+		if(!getQuestion32_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_2_clinic());
+		if(!getQuestion32_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_3_clinic());
+		if(!getQuestion32_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_4_clinic());
+		if(!getQuestion32_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_5_clinic());
+		if(!getQuestion32_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion32_6_clinic());
 		
 		return ls;
 	}
@@ -102,10 +102,10 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question31");
-		if(!getQuestion31_1_clinic().equals("пусто")) ls.add(getQuestion31_1_clinic());
-		if(!getQuestion31_2_clinic().equals("пусто")) ls.add(getQuestion31_2_clinic());
-		if(!getQuestion31_3_clinic().equals("пусто")) ls.add(getQuestion31_3_clinic());
-		//if(!getQuestion31_4_clinic().equals("пусто")) ls.add(getQuestion31_4_clinic());
+		if(!getQuestion31_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion31_1_clinic());
+		if(!getQuestion31_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion31_2_clinic());
+		if(!getQuestion31_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion31_3_clinic());
+		//if(!getQuestion31_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion31_4_clinic());
 		
 		return ls;
 	}
@@ -115,14 +115,14 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question29");
-		if(!getQuestion29_1_clinic().equals("пусто")) ls.add(getQuestion29_1_clinic());
-		if(!getQuestion29_2_clinic().equals("пусто")) ls.add(getQuestion29_2_clinic());
-		if(!getQuestion29_3_clinic().equals("пусто")) ls.add(getQuestion29_3_clinic());
-		if(!getQuestion29_4_clinic().equals("пусто")) ls.add(getQuestion29_4_clinic());
-		if(!getQuestion29_5_clinic().equals("пусто")) ls.add(getQuestion29_5_clinic());
-		if(!getQuestion29_6_clinic().equals("пусто")) ls.add(getQuestion29_6_clinic());
-		if(!getQuestion29_7_clinic().equals("пусто")) ls.add(getQuestion29_7_clinic());
-		if(!getQuestion29_8_clinic().equals("пусто")) ls.add(getQuestion29_8_clinic());
+		if(!getQuestion29_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_1_clinic());
+		if(!getQuestion29_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_2_clinic());
+		if(!getQuestion29_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_3_clinic());
+		if(!getQuestion29_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_4_clinic());
+		if(!getQuestion29_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_5_clinic());
+		if(!getQuestion29_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_6_clinic());
+		if(!getQuestion29_7_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_7_clinic());
+		if(!getQuestion29_8_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion29_8_clinic());
 		
 		return ls;
 	}
@@ -133,12 +133,12 @@ public class WrapMany {
 		
 		ls.add("question28");
 		
-			if(!getQuestion28_1_clinic().equals("пусто")) ls.add(getQuestion28_1_clinic());
-			if(!getQuestion28_2_clinic().equals("пусто")) ls.add(getQuestion28_2_clinic());
-			if(!getQuestion28_3_clinic().equals("пусто")) ls.add(getQuestion28_3_clinic());
-			if(!getQuestion28_4_clinic().equals("пусто")) ls.add(getQuestion28_4_clinic());
-			if(!getQuestion28_5_clinic().equals("пусто")) ls.add(getQuestion28_5_clinic());
-		//	if(!getQuestion28_6_clinic().equals("пусто")) ls.add(getQuestion28_6_clinic());
+			if(!getQuestion28_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_1_clinic());
+			if(!getQuestion28_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_2_clinic());
+			if(!getQuestion28_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_3_clinic());
+			if(!getQuestion28_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_4_clinic());
+			if(!getQuestion28_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_5_clinic());
+		//	if(!getQuestion28_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion28_6_clinic());
 			
 		
 		return ls;
@@ -149,13 +149,13 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question26");
-		if(!getQuestion26_1_clinic().equals("пусто")) ls.add(getQuestion26_1_clinic());
-		if(!getQuestion26_2_clinic().equals("пусто")) ls.add(getQuestion26_2_clinic());
-		if(!getQuestion26_3_clinic().equals("пусто")) ls.add(getQuestion26_3_clinic());
-		if(!getQuestion26_4_clinic().equals("пусто")) ls.add(getQuestion26_4_clinic());
-		if(!getQuestion26_5_clinic().equals("пусто")) ls.add(getQuestion26_5_clinic());
-		if(!getQuestion26_6_clinic().equals("пусто")) ls.add(getQuestion26_6_clinic());
-		if(!getQuestion26_7_clinic().equals("пусто")) ls.add(getQuestion26_7_clinic());
+		if(!getQuestion26_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_1_clinic());
+		if(!getQuestion26_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_2_clinic());
+		if(!getQuestion26_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_3_clinic());
+		if(!getQuestion26_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_4_clinic());
+		if(!getQuestion26_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_5_clinic());
+		if(!getQuestion26_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_6_clinic());
+		if(!getQuestion26_7_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion26_7_clinic());
 		
 		return ls;
 	}
@@ -165,12 +165,12 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question2");
-		if(!getQuestion2_1_clinic().equals("пусто")) ls.add(getQuestion2_1_clinic());
-		if(!getQuestion2_2_clinic().equals("пусто")) ls.add(getQuestion2_2_clinic());
-		if(!getQuestion2_3_clinic().equals("пусто")) ls.add(getQuestion2_3_clinic());
-		if(!getQuestion2_4_clinic().equals("пусто")) ls.add(getQuestion2_4_clinic());
-		if(!getQuestion2_5_clinic().equals("пусто")) ls.add(getQuestion2_5_clinic());
-		if(!getQuestion2_6_clinic().equals("пусто")) ls.add(getQuestion2_6_clinic());
+		if(!getQuestion2_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_1_clinic());
+		if(!getQuestion2_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_2_clinic());
+		if(!getQuestion2_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_3_clinic());
+		if(!getQuestion2_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_4_clinic());
+		if(!getQuestion2_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_5_clinic());
+		if(!getQuestion2_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion2_6_clinic());
 		
 		return ls;
 	}
@@ -180,11 +180,11 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question6_2");
-		if(!getQuestion6_2_1_clinic().equals("пусто")) ls.add(getQuestion6_2_1_clinic());
-		if(!getQuestion6_2_2_clinic().equals("пусто")) ls.add(getQuestion6_2_2_clinic());
-		if(!getQuestion6_2_3_clinic().equals("пусто")) ls.add(getQuestion6_2_3_clinic());
-		if(!getQuestion6_2_4_clinic().equals("пусто")) ls.add(getQuestion6_2_4_clinic());
-		if(!getQuestion6_2_5_clinic().equals("пусто")) ls.add(getQuestion6_2_5_clinic());
+		if(!getQuestion6_2_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_2_1_clinic());
+		if(!getQuestion6_2_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_2_2_clinic());
+		if(!getQuestion6_2_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_2_3_clinic());
+		if(!getQuestion6_2_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_2_4_clinic());
+		if(!getQuestion6_2_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_2_5_clinic());
 		
 		return ls;
 	}
@@ -194,11 +194,11 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question6_1");
-		if(!getQuestion6_1_1_clinic().equals("пусто")) ls.add(getQuestion6_1_1_clinic());
-		if(!getQuestion6_1_2_clinic().equals("пусто")) ls.add(getQuestion6_1_2_clinic());
-		if(!getQuestion6_1_3_clinic().equals("пусто")) ls.add(getQuestion6_1_3_clinic());
-		if(!getQuestion6_1_4_clinic().equals("пусто")) ls.add(getQuestion6_1_4_clinic());
-		if(!getQuestion6_1_5_clinic().equals("пусто")) ls.add(getQuestion6_1_5_clinic());
+		if(!getQuestion6_1_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_1_1_clinic());
+		if(!getQuestion6_1_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_1_2_clinic());
+		if(!getQuestion6_1_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_1_3_clinic());
+		if(!getQuestion6_1_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_1_4_clinic());
+		if(!getQuestion6_1_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion6_1_5_clinic());
 		
 		return ls;
 	}
@@ -208,16 +208,16 @@ public class WrapMany {
 		List<String> ls = new ArrayList<String>();
 		
 		ls.add("question24");
-		if(!getQuestion24_1_clinic().equals("пусто")) ls.add(getQuestion24_1_clinic());
-		if(!getQuestion24_2_clinic().equals("пусто")) ls.add(getQuestion24_2_clinic());
-		if(!getQuestion24_3_clinic().equals("пусто")) ls.add(getQuestion24_3_clinic());
-		if(!getQuestion24_4_clinic().equals("пусто")) ls.add(getQuestion24_4_clinic());
-		if(!getQuestion24_5_clinic().equals("пусто")) ls.add(getQuestion24_5_clinic());
-		if(!getQuestion24_6_clinic().equals("пусто")) ls.add(getQuestion24_6_clinic());
-		if(!getQuestion24_7_clinic().equals("пусто")) ls.add(getQuestion24_7_clinic());
-		if(!getQuestion24_8_clinic().equals("пусто")) ls.add(getQuestion24_8_clinic());
-		if(!getQuestion24_9_clinic().equals("пусто")) ls.add(getQuestion24_9_clinic());
-		if(!getQuestion24_10_clinic().equals("пусто")) ls.add(getQuestion24_10_clinic());
+		if(!getQuestion24_1_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_1_clinic());
+		if(!getQuestion24_2_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_2_clinic());
+		if(!getQuestion24_3_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_3_clinic());
+		if(!getQuestion24_4_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_4_clinic());
+		if(!getQuestion24_5_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_5_clinic());
+		if(!getQuestion24_6_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_6_clinic());
+		if(!getQuestion24_7_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_7_clinic());
+		if(!getQuestion24_8_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_8_clinic());
+		if(!getQuestion24_9_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_9_clinic());
+		if(!getQuestion24_10_clinic().equals("РїСѓСЃС‚Рѕ")) ls.add(getQuestion24_10_clinic());
 		
 		
 		return ls;

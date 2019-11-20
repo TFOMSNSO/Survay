@@ -121,11 +121,11 @@ public class ParamOnePart {
 	
 	public List<String> getMas() {
 		mas = new ArrayList<String>();
-		if(getAns1().equals("true")){mas.add("Удовлетворен(а)");}
-		if(getAns2().equals("true")){mas.add("Скорее удовлетворен(а), чем не удовлетворен(а)");}
-		if(getAns3().equals("true")){mas.add("Скорее не удовлетворен(а), чем удовлетворен(а)");}
-		if(getAns4().equals("true")){mas.add("Не удовлетворен(а)");}
-		if(getAns5().equals("true")){mas.add("Затрудняюсь ответить");}
+		if(getAns1().equals("true")){mas.add("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)");}
+		if(getAns2().equals("true")){mas.add("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)");}
+		if(getAns3().equals("true")){mas.add("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)");}
+		if(getAns4().equals("true")){mas.add("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)");}
+		if(getAns5().equals("true")){mas.add("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ");}
 		return mas;
 	}
 	public void setMas(List<String> mas) {

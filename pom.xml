@@ -276,7 +276,7 @@
                     <compilerArgument>-Xlint:all</compilerArgument>
                     <showWarnings>true</showWarnings>
                     <showDeprecation>true</showDeprecation>
-                    <encoding>Cp1251</encoding>
+					<encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
             <plugin>
