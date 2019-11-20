@@ -20,7 +20,7 @@ import nsk.tfoms.survay.service.ClinicService;
 import nsk.tfoms.survay.util.TimesAndDate;
 
 /*
- * Контроллер обрабатывает все что связано с анкетой первого уровня АПУ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РІСЃРµ С‡С‚Рѕ СЃРІСЏР·Р°РЅРѕ СЃ Р°РЅРєРµС‚РѕР№ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ РђРџРЈ
  */
 
 @Controller
@@ -57,7 +57,7 @@ public class OneClinic {
 	  public @ResponseBody nsk.tfoms.survay.util.JsonResponse save(@RequestParam String test) throws ParseException
 	  { 
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayClinic> list = personSvc.getAll(test);
 		    System.out.println("list "+ list );
 		    for (int i = 0; i < list.size(); i++)
@@ -79,26 +79,26 @@ public class OneClinic {
     public @ResponseBody nsk.tfoms.survay.util.JsonResponse chartpie(@RequestParam String test) throws ParseException
 	  { 
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayClinic> list = personSvc.getAll(test);
 		    List<Integer> ls = new ArrayList<Integer>();
 		    
 		    int m=0,sh=0,m2=0,sh2=0;
 		    for (int i = 0; i < list.size(); i++)
 		    {
-		    	if(Integer.valueOf(list.get(i).getAge())<=59 && list.get(i).getSex().equals("Мужской"))
+		    	if(Integer.valueOf(list.get(i).getAge())<=59 && list.get(i).getSex().equals("РњСѓР¶СЃРєРѕР№"))
 		    	{
 		    		m++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())<=54 && list.get(i).getSex().equals("Женский"))
+		    	if(Integer.valueOf(list.get(i).getAge())<=54 && list.get(i).getSex().equals("Р–РµРЅСЃРєРёР№"))
 		    	{
 		    		sh++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())>=60 && list.get(i).getSex().equals("Мужской"))
+		    	if(Integer.valueOf(list.get(i).getAge())>=60 && list.get(i).getSex().equals("РњСѓР¶СЃРєРѕР№"))
 		    	{
 		    		m2++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())>=55 && list.get(i).getSex().equals("Женский"))
+		    	if(Integer.valueOf(list.get(i).getAge())>=55 && list.get(i).getSex().equals("Р–РµРЅСЃРєРёР№"))
 		    	{
 		    		sh2++;
 		    	}
@@ -119,7 +119,7 @@ public class OneClinic {
     { 
     	
     	nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-	    // вытаскиваем из базы 
+	    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 	    List<SurvayClinic> list = personSvc.getAllbetween(datebegin, dateend,userp);
 
     	
@@ -128,19 +128,19 @@ public class OneClinic {
 		    int m=0,sh=0,m2=0,sh2=0;
 		    for (int i = 0; i < list.size(); i++)
 		    {
-		    	if(Integer.valueOf(list.get(i).getAge())<=59 && list.get(i).getSex().equals("Мужской"))
+		    	if(Integer.valueOf(list.get(i).getAge())<=59 && list.get(i).getSex().equals("РњСѓР¶СЃРєРѕР№"))
 		    	{
 		    		m++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())<=54 && list.get(i).getSex().equals("Женский"))
+		    	if(Integer.valueOf(list.get(i).getAge())<=54 && list.get(i).getSex().equals("Р–РµРЅСЃРєРёР№"))
 		    	{
 		    		sh++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())>=60 && list.get(i).getSex().equals("Мужской"))
+		    	if(Integer.valueOf(list.get(i).getAge())>=60 && list.get(i).getSex().equals("РњСѓР¶СЃРєРѕР№"))
 		    	{
 		    		m2++;
 		    	}
-		    	if(Integer.valueOf(list.get(i).getAge())>=55 && list.get(i).getSex().equals("Женский"))
+		    	if(Integer.valueOf(list.get(i).getAge())>=55 && list.get(i).getSex().equals("Р–РµРЅСЃРєРёР№"))
 		    	{
 		    		sh2++;
 		    	}
@@ -157,7 +157,7 @@ public class OneClinic {
 
 	  { 
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayClinic> list = personSvc.getAllbetween(datebegin, dateend,userp);
 
 			for (int i = 0; i < list.size(); i++)
@@ -176,7 +176,7 @@ public class OneClinic {
 		  BigDecimal idBD = new BigDecimal(id.replaceAll(",", ""));
 		  
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayClinic> list = personSvc.getOnId(idBD, user);
 		    list.get(0).setDataResp(	TimesAndDate.parseDate(list.get(0).getDataResp())	);
 		    res.setStatus("SUCCESS");

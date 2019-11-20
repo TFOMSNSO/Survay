@@ -24,7 +24,7 @@ import nsk.tfoms.survay.pojo.Sender;
 import nsk.tfoms.survay.service.ClinicServiceSecondLevel;
 
 /*
- * Контроллер обрабатывает все что связано с анкетой первого уровня АПУ
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РІСЃРµ С‡С‚Рѕ СЃРІСЏР·Р°РЅРѕ СЃ Р°РЅРєРµС‚РѕР№ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ РђРџРЈ
  
 --delete from question_many_clinic t 
 --delete from  survay_clinic_secondlevel d 
@@ -102,7 +102,7 @@ public class ClinicSecondLevel {
 		  int idInt = Integer.valueOf(id);
 		  
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayClinicSecondlevel> list = personSvc.getOnId(idInt, user);
 		    
 		    res.setStatus("SUCCESS");

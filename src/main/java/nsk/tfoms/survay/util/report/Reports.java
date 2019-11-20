@@ -53,7 +53,7 @@ public class Reports {
 
 
 	/*
-     * Выргужаем фаил и удаляем с сервака
+     * Р’С‹СЂРіСѓР¶Р°РµРј С„Р°РёР» Рё СѓРґР°Р»СЏРµРј СЃ СЃРµСЂРІР°РєР°
      * 
      */
     
@@ -110,7 +110,7 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Период отчета");
+         excelCell.setCellValue("РџРµСЂРёРѕРґ РѕС‚С‡РµС‚Р°");
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
          excelCell.setCellValue(paramonepart.getDatestart());
@@ -124,7 +124,7 @@ public class Reports {
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Мед огранизация");
+         excelCell.setCellValue("РњРµРґ РѕРіСЂР°РЅРёР·Р°С†РёСЏ");
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
          excelCell.setCellValue(paramonepart.getLpu());
@@ -135,7 +135,7 @@ public class Reports {
          excelRow = sheet.getRow(2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Категории ответов");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёРё РѕС‚РІРµС‚РѕРІ");
          for(int i=0;i<paramonepart.getMas().size();i++)
          {
         	 excelCell = excelRow.createCell(i+1);
@@ -219,7 +219,7 @@ public class Reports {
          excelRow.setHeight((short) 800);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Индикатор доступности и качества медицинской помощи");
+         excelCell.setCellValue("РРЅРґРёРєР°С‚РѕСЂ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё Рё РєР°С‡РµСЃС‚РІР° РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
          excelCell.setCellStyle(style);
          sheet.addMergedRegion(new CellRangeAddress(5,5,0,27));
          
@@ -232,7 +232,7 @@ public class Reports {
          excelRow.setHeight((short) 1000);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Вопросы");
+         excelCell.setCellValue("Р’РѕРїСЂРѕСЃС‹");
          titleFont.setFontHeightInPoints((short)15);
          excelCell.setCellStyle(style);
          sheet.addMergedRegion(new CellRangeAddress(6, 7, 0, 0));
@@ -245,22 +245,22 @@ public class Reports {
             excelRow = sheet.getRow(6);	
             excelCell = excelRow.createCell(1);
             excelCell = excelRow.getCell(1);
-            excelCell.setCellValue("Категория респонденты мужчины 0-13лет");
+            excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 0-13Р»РµС‚");
             excelCell.setCellStyle(style2);
             excelRow = sheet.getRow(6);	
             excelCell = excelRow.createCell(2);
             excelCell = excelRow.getCell(2);
-            excelCell.setCellValue("Категория респонденты женщины 0-13лет");
+            excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 0-13Р»РµС‚");
             excelCell.setCellStyle(style2);
             excelRow = sheet.getRow(6);	
             excelCell = excelRow.createCell(3);
             excelCell = excelRow.getCell(3);
-            excelCell.setCellValue("Категория респонденты мужчины 14-17лет");
+            excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 14-17Р»РµС‚");
             excelCell.setCellStyle(style2);
             excelRow = sheet.getRow(6);	
             excelCell = excelRow.createCell(4);
             excelCell = excelRow.getCell(4);
-            excelCell.setCellValue("Категория респонденты женщины 14-17лет");
+            excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 14-17Р»РµС‚");
             excelCell.setCellStyle(style2);
          
          
@@ -270,57 +270,57 @@ public class Reports {
       //   excelCell = excelRow.getCell(1);
          excelCell = excelRow.createCell(5);
          excelCell = excelRow.getCell(5); 
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 18-59Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          //excelCell = excelRow.createCell(2);
          //excelCell = excelRow.getCell(2);
          excelCell = excelRow.createCell(6);
          excelCell = excelRow.getCell(6);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 18-54 Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          //excelCell = excelRow.createCell(3);
          //excelCell = excelRow.getCell(3);
          excelCell = excelRow.createCell(7);
          excelCell = excelRow.getCell(7);
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 60 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
         // excelCell = excelRow.createCell(4);
         // excelCell = excelRow.getCell(4);
          excelCell = excelRow.createCell(8);
          excelCell = excelRow.getCell(8); 
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 55 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
         // excelCell = excelRow.createCell(5);
         // excelCell = excelRow.getCell(5);
          excelCell = excelRow.createCell(9);
          excelCell = excelRow.getCell(9); 
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("РС‚РѕРіРѕ СЃСѓРјРјР°");
          excelCell.setCellStyle(style2);
          
          //27.03.2019
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
-         excelCell.setCellValue("Категория респонденты мужчины 0-13лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 0-13Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(11);
          excelCell = excelRow.getCell(11);
-         excelCell.setCellValue("Категория респонденты женщины 0-13лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 0-13Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(12);
          excelCell = excelRow.getCell(12);
-         excelCell.setCellValue("Категория респонденты мужчины 14-17лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 14-17Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(13);
          excelCell = excelRow.getCell(13);
-         excelCell.setCellValue("Категория респонденты женщины 14-17лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 14-17Р»РµС‚");
          excelCell.setCellStyle(style2);
          
          excelRow = sheet.getRow(6);	
@@ -328,35 +328,35 @@ public class Reports {
          //excelCell = excelRow.getCell(6);
          excelCell = excelRow.createCell(14);
          excelCell = excelRow.getCell(14);
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 18-59Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          //excelCell = excelRow.createCell(7);
          //excelCell = excelRow.getCell(7);
          excelCell = excelRow.createCell(15);
          excelCell = excelRow.getCell(15);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 18-54 Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
        //  excelCell = excelRow.createCell(8);
        //  excelCell = excelRow.getCell(8);
          excelCell = excelRow.createCell(16);
          excelCell = excelRow.getCell(16);  
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 60 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
         // excelCell = excelRow.createCell(9);
         // excelCell = excelRow.getCell(9);
          excelCell = excelRow.createCell(17);
          excelCell = excelRow.getCell(17); 
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 55 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
        //  excelCell = excelRow.createCell(10);
        //  excelCell = excelRow.getCell(10);
          excelCell = excelRow.createCell(18);
          excelCell = excelRow.getCell(18);  
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("РС‚РѕРіРѕ СЃСѓРјРјР°");
          excelCell.setCellStyle(style2);
        
          
@@ -365,22 +365,22 @@ public class Reports {
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(19);
          excelCell = excelRow.getCell(19);
-         excelCell.setCellValue("Категория респонденты мужчины 0-13лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 0-13Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(20);
          excelCell = excelRow.getCell(20);
-         excelCell.setCellValue("Категория респонденты женщины 0-13лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 0-13Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(21);
          excelCell = excelRow.getCell(21);
-         excelCell.setCellValue("Категория респонденты мужчины 14-17лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 14-17Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          excelCell = excelRow.createCell(22);
          excelCell = excelRow.getCell(22);
-         excelCell.setCellValue("Категория респонденты женщины 14-17лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 14-17Р»РµС‚");
          excelCell.setCellStyle(style2);
          
          
@@ -389,7 +389,7 @@ public class Reports {
         // excelCell = excelRow.getCell(11);
          excelCell = excelRow.createCell(23);
          excelCell = excelRow.getCell(23);
-         excelCell.setCellValue("Категория респонденты мужчины 18-59лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 18-59Р»РµС‚");
          excelCell.setCellStyle(style2);
 
          
@@ -398,28 +398,28 @@ public class Reports {
        //  excelCell = excelRow.getCell(12);
          excelCell = excelRow.createCell(24);
          excelCell = excelRow.getCell(24);
-         excelCell.setCellValue("Категория респонденты женщины 18-54 лет");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 18-54 Р»РµС‚");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
          //excelCell = excelRow.createCell(13);
          //excelCell = excelRow.getCell(13);
          excelCell = excelRow.createCell(25);
          excelCell = excelRow.getCell(25);
-         excelCell.setCellValue("Категория респонденты мужчины 60 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ РјСѓР¶С‡РёРЅС‹ 60 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
         // excelCell = excelRow.createCell(14);
         // excelCell = excelRow.getCell(14);
          excelCell = excelRow.createCell(26);
          excelCell = excelRow.getCell(26);
-         excelCell.setCellValue("Категория респонденты женщины 55 лет и старше");
+         excelCell.setCellValue("РљР°С‚РµРіРѕСЂРёСЏ СЂРµСЃРїРѕРЅРґРµРЅС‚С‹ Р¶РµРЅС‰РёРЅС‹ 55 Р»РµС‚ Рё СЃС‚Р°СЂС€Рµ");
          excelCell.setCellStyle(style2);
          excelRow = sheet.getRow(6);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
          excelCell = excelRow.createCell(27);
          excelCell = excelRow.getCell(27); 
-         excelCell.setCellValue("Итого сумма");
+         excelCell.setCellValue("РС‚РѕРіРѕ СЃСѓРјРјР°");
          excelCell.setCellStyle(style2);
 
  
@@ -433,7 +433,7 @@ public class Reports {
          excelRow.setHeight((short) 400);
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Амбулаторно-поликлиническая помощь");
+         excelCell.setCellValue("РђРјР±СѓР»Р°С‚РѕСЂРЅРѕ-РїРѕР»РёРєР»РёРЅРёС‡РµСЃРєР°СЏ РїРѕРјРѕС‰СЊ");
          excelCell.setCellStyle(style3);
        //  sheet.addMergedRegion(new CellRangeAddress(7,7,1,5));
          sheet.addMergedRegion(new CellRangeAddress(7,7,1,9));
@@ -443,7 +443,7 @@ public class Reports {
        //  excelCell = excelRow.getCell(6);
          excelCell = excelRow.createCell(10);
          excelCell = excelRow.getCell(10);
-         excelCell.setCellValue("Дневной стационар");
+         excelCell.setCellValue("Р”РЅРµРІРЅРѕР№ СЃС‚Р°С†РёРѕРЅР°СЂ");
          excelCell.setCellStyle(style3);
          //sheet.addMergedRegion(new CellRangeAddress(7,7,6,10));
          sheet.addMergedRegion(new CellRangeAddress(7,7,10,18));
@@ -453,7 +453,7 @@ public class Reports {
          //excelCell = excelRow.getCell(11);
          excelCell = excelRow.createCell(19);
          excelCell = excelRow.getCell(19);
-         excelCell.setCellValue("Стационарная помощь");
+         excelCell.setCellValue("РЎС‚Р°С†РёРѕРЅР°СЂРЅР°СЏ РїРѕРјРѕС‰СЊ");
          excelCell.setCellStyle(style3);
         //sheet.addMergedRegion(new CellRangeAddress(7,7,11,15));
          sheet.addMergedRegion(new CellRangeAddress(7,7,19,27));
@@ -474,9 +474,9 @@ public class Reports {
          /*
           * Data 
           */
-         // ПОЛИКЛИНИКА
+         // РџРћР›РРљР›РРќРРљРђ
          
-         // Организацией записи на прием к врачу
+         // РћСЂРіР°РЅРёР·Р°С†РёРµР№ Р·Р°РїРёСЃРё РЅР° РїСЂРёРµРј Рє РІСЂР°С‡Сѓ
         // for(int i=0; i<4;i++)
          for(int i=0; i<8;i++)	 
          {
@@ -485,7 +485,7 @@ public class Reports {
              //excelCell = excelRow.getCell(i+1);  
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1); 
-          //03.04.2019 так было и замена   
+          //03.04.2019 С‚Р°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°   
          //    excelCell.setCellValue(countonquestionClinic1(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
  
@@ -502,7 +502,7 @@ public class Reports {
           
     
          
-         //  СУММА Организацией записи на прием к врачу
+         //  РЎРЈРњРњРђ РћСЂРіР°РЅРёР·Р°С†РёРµР№ Р·Р°РїРёСЃРё РЅР° РїСЂРёРµРј Рє РІСЂР°С‡Сѓ
         	 excelRow = sheet.getRow(8);	
             // excelCell = excelRow.createCell(5);
             // excelCell = excelRow.getCell(5);  
@@ -525,7 +525,7 @@ public class Reports {
              //
             
          
-         // Временем ожидания приема врача
+         // Р’СЂРµРјРµРЅРµРј РѕР¶РёРґР°РЅРёСЏ РїСЂРёРµРјР° РІСЂР°С‡Р°
         // for(int i=0; i<4;i++)
              for(int i=0; i<8;i++)	 
          {
@@ -534,7 +534,7 @@ public class Reports {
             // excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
              //excelCell.setCellValue(countonquestionClinic2(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -549,7 +549,7 @@ public class Reports {
              //
          }
          
-         // СУММА Временем ожидания приема врача
+         // РЎРЈРњРњРђ Р’СЂРµРјРµРЅРµРј РѕР¶РёРґР°РЅРёСЏ РїСЂРёРµРјР° РІСЂР°С‡Р°
         	 excelRow = sheet.getRow(9);	
            //  excelCell = excelRow.createCell(5);
            //  excelCell = excelRow.getCell(5);
@@ -574,7 +574,7 @@ public class Reports {
              //
              
              
-         // Сроками ожидания медицинских услуг после записи
+         // РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі РїРѕСЃР»Рµ Р·Р°РїРёСЃРё
         // for(int i=0; i<4;i++)
              for(int i=0; i<8;i++)
          {
@@ -598,7 +598,7 @@ public class Reports {
              //
          }
          
-         // СУММА Сроками ожидания медицинских услуг после записи
+         // РЎРЈРњРњРђ РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі РїРѕСЃР»Рµ Р·Р°РїРёСЃРё
         	 excelRow = sheet.getRow(10);	
             // excelCell = excelRow.createCell(5);
            //  excelCell = excelRow.getCell(5);
@@ -623,7 +623,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //   
              
-         // Доступностью необходимых лабораторных исследований/анализов
+         // Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РЅРµРѕР±С…РѕРґРёРјС‹С… Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹С… РёСЃСЃР»РµРґРѕРІР°РЅРёР№/Р°РЅР°Р»РёР·РѕРІ
       //   for(int i=0; i<4;i++)
              for(int i=0; i<8;i++)
          {
@@ -632,7 +632,7 @@ public class Reports {
             // excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1); 
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
           //   excelCell.setCellValue(countonquestionClinic4(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -647,7 +647,7 @@ public class Reports {
              //
          }
          
-         // СУММА Доступностью необходимых лабораторных исследований/анализов
+         // РЎРЈРњРњРђ Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РЅРµРѕР±С…РѕРґРёРјС‹С… Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹С… РёСЃСЃР»РµРґРѕРІР°РЅРёР№/Р°РЅР°Р»РёР·РѕРІ
         	 excelRow = sheet.getRow(11);	
            //  excelCell = excelRow.createCell(5);
            //  excelCell = excelRow.getCell(5);
@@ -672,7 +672,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //
              
-         // Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)
+         // Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёС… РёСЃСЃР»РµРґРѕРІР°РЅРёР№ (Р­РљР“, РЈР—Р Рё С‚.Рґ.)
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(12);	
@@ -680,7 +680,7 @@ public class Reports {
            //  excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);  
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
            //  excelCell.setCellValue(countonquestionClinic5(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -695,7 +695,7 @@ public class Reports {
              //
          }
          
-         // СУММА Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)
+         // РЎРЈРњРњРђ Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёС… РёСЃСЃР»РµРґРѕРІР°РЅРёР№ (Р­РљР“, РЈР—Р Рё С‚.Рґ.)
         	 excelRow = sheet.getRow(12);	
           //   excelCell = excelRow.createCell(5);
           //   excelCell = excelRow.getCell(5);
@@ -721,7 +721,7 @@ public class Reports {
              //
              
              
-         // Доступностью мед.помощи терапевтов
+         // Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё С‚РµСЂР°РїРµРІС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(13);	
@@ -729,7 +729,7 @@ public class Reports {
           //   excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);   
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
           //   excelCell.setCellValue(countonquestionClinic6(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -744,7 +744,7 @@ public class Reports {
              //
          }
          
-         // СУММА Доступностью мед.помощи терапевтов
+         // РЎРЈРњРњРђ Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё С‚РµСЂР°РїРµРІС‚РѕРІ
         	 excelRow = sheet.getRow(13);	
             // excelCell = excelRow.createCell(5);
             // excelCell = excelRow.getCell(5);
@@ -769,7 +769,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //   
              
-         // Доступностью мед.помощи врачей-специалистов
+         // Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё РІСЂР°С‡РµР№-СЃРїРµС†РёР°Р»РёСЃС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(14);	
@@ -777,7 +777,7 @@ public class Reports {
          //    excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);    
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
           //   excelCell.setCellValue(countonquestionClinic7(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -792,7 +792,7 @@ public class Reports {
          }
 
          
-         // СУММА Доступностью мед.помощи врачей-специалистов
+         // РЎРЈРњРњРђ Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё РІСЂР°С‡РµР№-СЃРїРµС†РёР°Р»РёСЃС‚РѕРІ
         	 excelRow = sheet.getRow(14);	
            //  excelCell = excelRow.createCell(5);
            //  excelCell = excelRow.getCell(5);
@@ -817,7 +817,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //
              
-         // Работой врачей в поликлинике
+         // Р Р°Р±РѕС‚РѕР№ РІСЂР°С‡РµР№ РІ РїРѕР»РёРєР»РёРЅРёРєРµ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(15);	
@@ -825,7 +825,7 @@ public class Reports {
           //   excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);   
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
           //   excelCell.setCellValue(countonquestionClinic8(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -840,7 +840,7 @@ public class Reports {
              //
          }
          
-         //СУММА Работой врачей в поликлинике
+         //РЎРЈРњРњРђ Р Р°Р±РѕС‚РѕР№ РІСЂР°С‡РµР№ РІ РїРѕР»РёРєР»РёРЅРёРєРµ
         	 excelRow = sheet.getRow(15);	
           //   excelCell = excelRow.createCell(5);
           //   excelCell = excelRow.getCell(5);
@@ -865,7 +865,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //
          
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -873,7 +873,7 @@ public class Reports {
            //  excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1); 
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
            //  excelCell.setCellValue(countonquestionClinic9(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -888,7 +888,7 @@ public class Reports {
              //
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РЎРЈРњРњРђ РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
         	 excelRow = sheet.getRow(16);	
           //   excelCell = excelRow.createCell(5);
           //   excelCell = excelRow.getCell(5);
@@ -912,7 +912,7 @@ public class Reports {
              else{
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -920,7 +920,7 @@ public class Reports {
           //   excelCell = excelRow.getCell(i+1);
              excelCell = excelRow.createCell(i+1);
              excelCell = excelRow.getCell(i+1);   
-             //03.04.2019 Так было и замена
+             //03.04.2019 РўР°Рє Р±С‹Р»Рѕ Рё Р·Р°РјРµРЅР°
            //  excelCell.setCellValue(countonquestionClinic10(forOneOrgClinic.get(i),paramonepart.getMas()));
              excelCell.setCellValue(forOneOrgClinic.get(i).size()); 
              
@@ -935,7 +935,7 @@ public class Reports {
              //
          }
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // РЎРЈРњРњРђ РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
         	 excelRow = sheet.getRow(17);	
             // excelCell = excelRow.createCell(5);
             // excelCell = excelRow.getCell(5);
@@ -959,7 +959,7 @@ public class Reports {
              else{
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              // 
-         // Оснащенностью современным медицинским оборудованием
+         // РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -983,7 +983,7 @@ public class Reports {
  
          }
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // РЎРЈРњРњРђ РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
         	 excelRow = sheet.getRow(18);	
           //   excelCell = excelRow.createCell(5);
           //   excelCell = excelRow.getCell(5);
@@ -1008,7 +1008,7 @@ public class Reports {
              excelCell.setCellValue(countonquestionClinic12(forOneOrgClinic));}
              //
          
-         // количество опрошенных респондентов
+         // РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(19);	
@@ -1032,7 +1032,7 @@ public class Reports {
 
 
          
-         // СУММА количество опрошенных респондентов
+         // РЎРЈРњРњРђ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
         	 excelRow = sheet.getRow(19);	
            //  excelCell = excelRow.createCell(5);
            //  excelCell = excelRow.getCell(5);
@@ -1060,10 +1060,10 @@ public class Reports {
          
              
          /*
-          * Дневной стационар
+          * Р”РЅРµРІРЅРѕР№ СЃС‚Р°С†РёРѕРЅР°СЂ
           */
              
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -1071,7 +1071,7 @@ public class Reports {
            //  excelCell = excelRow.getCell(i+6);
              excelCell = excelRow.createCell(i+10);
              excelCell = excelRow.getCell(i+10);  
-             //03.04.2019 Было так исправил
+             //03.04.2019 Р‘С‹Р»Рѕ С‚Р°Рє РёСЃРїСЂР°РІРёР»
          //    excelCell.setCellValue(countonquestionDC1(forOneOrgDayStac.get(i),paramonepart.getMas()));
            //04.04.2019      
              if (paramonepart.getPlus_twolevel().equals("true")){  
@@ -1093,7 +1093,7 @@ public class Reports {
              
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РЎРЈРњРњРђ РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
     	 excelRow = sheet.getRow(16);	
          //excelCell = excelRow.createCell(10);
          //excelCell = excelRow.getCell(10);
@@ -1117,7 +1117,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -1146,7 +1146,7 @@ public class Reports {
          }
          
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // РЎРЈРњРњРђ РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
     	 excelRow = sheet.getRow(17);	
          //excelCell = excelRow.createCell(10);
          //excelCell = excelRow.getCell(10);
@@ -1170,7 +1170,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Оснащенностью современным медицинским оборудованием
+         // РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -1199,7 +1199,7 @@ public class Reports {
          }
          
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // РЎРЈРњРњРђ РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
     	 excelRow = sheet.getRow(18);	
         // excelCell = excelRow.createCell(10);
         // excelCell = excelRow.getCell(10);
@@ -1224,7 +1224,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Комфортностью больничной палаты и мест пребывания пациентов
+         // РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(21);	
@@ -1252,7 +1252,7 @@ public class Reports {
              //
          }
          
-         // СУММА Комфортностью больничной палаты и мест пребывания пациентов
+         // РЎРЈРњРњРђ РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ
     	 excelRow = sheet.getRow(21);	
         // excelCell = excelRow.createCell(10);
         // excelCell = excelRow.getCell(10);
@@ -1278,7 +1278,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Комплексом предоставляемых медицинских услуг
+         // РљРѕРјРїР»РµРєСЃРѕРј РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјС‹С… РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(22);	
@@ -1306,7 +1306,7 @@ public class Reports {
              //
          }
          
-         // СУММА Комплексом предоставляемых медицинских услуг
+         // РЎРЈРњРњРђ РљРѕРјРїР»РµРєСЃРѕРј РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјС‹С… РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі
     	 excelRow = sheet.getRow(22);	
       //   excelCell = excelRow.createCell(10);
       //   excelCell = excelRow.getCell(10);
@@ -1331,7 +1331,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // Р Р°Р±РѕС‚РѕР№ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»СѓР¶Р± (Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏ, СЂРµРЅС‚РіРµРЅ-РєР°Р±РёРЅРµС‚, С„РёР·РёРѕС‚РµСЂР°РїРµРІС‚РёС‡РµСЃРєРёР№ РєР°Р±РёРЅРµС‚ Рё С‚.Рґ.
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(23);	
@@ -1360,7 +1360,7 @@ public class Reports {
       // 
          }
          
-         // СУММА Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // РЎРЈРњРњРђ Р Р°Р±РѕС‚РѕР№ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»СѓР¶Р± (Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏ, СЂРµРЅС‚РіРµРЅ-РєР°Р±РёРЅРµС‚, С„РёР·РёРѕС‚РµСЂР°РїРµРІС‚РёС‡РµСЃРєРёР№ РєР°Р±РёРЅРµС‚ Рё С‚.Рґ.
     	 excelRow = sheet.getRow(23);	
         // excelCell = excelRow.createCell(10);
         // excelCell = excelRow.getCell(10);
@@ -1384,7 +1384,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Обеспеченностью медикаментами и расходными материалами
+         // РћР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚СЊСЋ РјРµРґРёРєР°РјРµРЅС‚Р°РјРё Рё СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(24);	
@@ -1413,7 +1413,7 @@ public class Reports {
       //     
          }
          
-         // СУММА Обеспеченностью медикаментами и расходными материалами
+         // РЎРЈРњРњРђ РћР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚СЊСЋ РјРµРґРёРєР°РјРµРЅС‚Р°РјРё Рё СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё
     	 excelRow = sheet.getRow(24);	
          //excelCell = excelRow.createCell(10);
          //excelCell = excelRow.getCell(10);
@@ -1439,7 +1439,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // Работой лечащего врача
+         // Р Р°Р±РѕС‚РѕР№ Р»РµС‡Р°С‰РµРіРѕ РІСЂР°С‡Р°
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(25);	
@@ -1468,7 +1468,7 @@ public class Reports {
       //     
          }
          
-         // СУММА Работой лечащего врача
+         // РЎРЈРњРњРђ Р Р°Р±РѕС‚РѕР№ Р»РµС‡Р°С‰РµРіРѕ РІСЂР°С‡Р°
     	 excelRow = sheet.getRow(25);	
         // excelCell = excelRow.createCell(10);
         // excelCell = excelRow.getCell(10);
@@ -1492,7 +1492,7 @@ public class Reports {
          else{ excelCell.setCellValue(countonquestionDC9(forOneOrgDayStac));}
          //
          
-         // количество опрошенных респондентов
+         // РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(26);	
@@ -1521,7 +1521,7 @@ public class Reports {
       //     
          }
          
-         // СУММА количество опрошенных респондентов
+         // РЎРЈРњРњРђ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
     	 excelRow = sheet.getRow(26);	
         // excelCell = excelRow.createCell(10);
         // excelCell = excelRow.getCell(10);
@@ -1548,10 +1548,10 @@ public class Reports {
 
          
          /*
-          * Стационарная помощь
+          * РЎС‚Р°С†РёРѕРЅР°СЂРЅР°СЏ РїРѕРјРѕС‰СЊ
           */
              
-         // Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(16);	
@@ -1580,7 +1580,7 @@ public class Reports {
       //
          }
          
-         // СУММА Насколько Вы удовлетворены качеством бесплатной медицинской помощи
+         // РЎРЈРњРњРђ РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё
     	 excelRow = sheet.getRow(16);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -1604,7 +1604,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Техническим состоянием, ремонтом помещений, площадью помещений
+         // РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(17);	
@@ -1633,7 +1633,7 @@ public class Reports {
       //
          }
          
-         // СУММА Техническим состоянием, ремонтом помещений, площадью помещений
+         // РЎРЈРњРњРђ РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№
     	 excelRow = sheet.getRow(17);	
        //  excelCell = excelRow.createCell(15);
        //  excelCell = excelRow.getCell(15);
@@ -1657,7 +1657,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Оснащенностью современным медицинским оборудованием
+         // РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(18);	
@@ -1686,7 +1686,7 @@ public class Reports {
       //
          }
          
-         // СУММА Оснащенностью современным медицинским оборудованием
+         // РЎРЈРњРњРђ РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј
     	 excelRow = sheet.getRow(18);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -1710,7 +1710,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // Р Р°Р±РѕС‚РѕР№ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»СѓР¶Р± (Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏ, СЂРµРЅС‚РіРµРЅ-РєР°Р±РёРЅРµС‚, С„РёР·РёРѕС‚РµСЂР°РїРµРІС‚РёС‡РµСЃРєРёР№ РєР°Р±РёРЅРµС‚ Рё С‚.Рґ.
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(23);	
@@ -1739,7 +1739,7 @@ public class Reports {
       //
          }
          
-         // СУММА Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.
+         // РЎРЈРњРњРђ Р Р°Р±РѕС‚РѕР№ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»СѓР¶Р± (Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏ, СЂРµРЅС‚РіРµРЅ-РєР°Р±РёРЅРµС‚, С„РёР·РёРѕС‚РµСЂР°РїРµРІС‚РёС‡РµСЃРєРёР№ РєР°Р±РёРЅРµС‚ Рё С‚.Рґ.
     	 excelRow = sheet.getRow(23);	
          //excelCell = excelRow.createCell(15);
          //excelCell = excelRow.getCell(15);
@@ -1763,7 +1763,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Обеспеченностью медикаментами и расходными материалами
+         // РћР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚СЊСЋ РјРµРґРёРєР°РјРµРЅС‚Р°РјРё Рё СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(24);	
@@ -1792,7 +1792,7 @@ public class Reports {
       //
          }
          
-         // СУММА Обеспеченностью медикаментами и расходными материалами
+         // РЎРЈРњРњРђ РћР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚СЊСЋ РјРµРґРёРєР°РјРµРЅС‚Р°РјРё Рё СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё
     	 excelRow = sheet.getRow(24);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -1816,7 +1816,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Работой лечащего врача
+         // Р Р°Р±РѕС‚РѕР№ Р»РµС‡Р°С‰РµРіРѕ РІСЂР°С‡Р°
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(25);	
@@ -1845,7 +1845,7 @@ public class Reports {
       //
          }
          
-         // СУММА Работой лечащего врача
+         // РЎРЈРњРњРђ Р Р°Р±РѕС‚РѕР№ Р»РµС‡Р°С‰РµРіРѕ РІСЂР°С‡Р°
     	 excelRow = sheet.getRow(25);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -1869,7 +1869,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Комфортностью больничной палаты и мест пребывания пациентов
+         // РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(28);	
@@ -1898,7 +1898,7 @@ public class Reports {
       //
          }
          
-         // СУММА Комфортностью больничной палаты и мест пребывания пациентов
+         // РЎРЈРњРњРђ РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ
     	 excelRow = sheet.getRow(28);	
        //  excelCell = excelRow.createCell(15);
        //  excelCell = excelRow.getCell(15);
@@ -1922,7 +1922,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // Питание
+         // РџРёС‚Р°РЅРёРµ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(29);	
@@ -1951,7 +1951,7 @@ public class Reports {
       //
          }
          
-         // СУММА Питание
+         // РЎРЈРњРњРђ РџРёС‚Р°РЅРёРµ
     	 excelRow = sheet.getRow(29);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -1975,7 +1975,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         //Сроками ожидания плановой госпитализации
+         //РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РїР»Р°РЅРѕРІРѕР№ РіРѕСЃРїРёС‚Р°Р»РёР·Р°С†РёРё
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(30);	
@@ -2004,7 +2004,7 @@ public class Reports {
       //
          }
          
-         // СУММА Сроками ожидания плановой госпитализации
+         // РЎРЈРњРњРђ РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РїР»Р°РЅРѕРІРѕР№ РіРѕСЃРїРёС‚Р°Р»РёР·Р°С†РёРё
     	 excelRow = sheet.getRow(30);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -2028,7 +2028,7 @@ public class Reports {
          else{excelCell.setCellValue(countonquestionStac10(forOneOrgStac));}
          //
          
-         // количество опрошенных респондентов
+         // РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
          for(int i=0; i<8;i++)
          {
         	 excelRow = sheet.getRow(31);	
@@ -2057,7 +2057,7 @@ public class Reports {
       //
          }
          
-         // СУММА количество опрошенных респондентов
+         // РЎРЈРњРњРђ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ
     	 excelRow = sheet.getRow(31);	
         // excelCell = excelRow.createCell(15);
         // excelCell = excelRow.getCell(15);
@@ -2082,7 +2082,7 @@ public class Reports {
          //
 
          
-         sheet = wb.createSheet("Опрошенные ЛПУ");
+         sheet = wb.createSheet("РћРїСЂРѕС€РµРЅРЅС‹Рµ Р›РџРЈ");
          
          Set<String> hSetOneOrgClinic = new HashSet<String>();
          Set<String> hSetOneDayStac = new HashSet<String>();
@@ -2090,7 +2090,7 @@ public class Reports {
          
          CellRangeAddress adr;
          
-         //========================================================ВТОРОЙ ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'=========================================================================================
+         //========================================================Р’РўРћР РћР™ Р›РРЎРў 'РћРџР РћРЁР•РќРќР«Р• Р›РџРЈ'=========================================================================================
          
         Map<String, List<SurvayClinic>> countOnMO = new HashMap<String, List<SurvayClinic>>();
          
@@ -2101,7 +2101,7 @@ public class Reports {
         	 {
       	 
         		 
-        		 // вычисляем количество проанкетированных в разрезе мо и юзера 
+        		 // РІС‹С‡РёСЃР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕР°РЅРєРµС‚РёСЂРѕРІР°РЅРЅС‹С… РІ СЂР°Р·СЂРµР·Рµ РјРѕ Рё СЋР·РµСЂР° 
         		 	SurvayClinic cl = forOneOrgClinic.get(i).get(j);
   
         		 	String key = cl.getMo()+"!"+cl.getPolzovatel();
@@ -2130,7 +2130,7 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("АПУ");
+         excelCell.setCellValue("РђРџРЈ");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(0,0,0,1));
@@ -2145,20 +2145,20 @@ public class Reports {
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Р›РџРЈ");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ");
          
          //22.03.2019
          excelCell = excelRow.createCell(3);
          excelCell = excelRow.getCell(3);
-         excelCell.setCellValue("Взрослые 18 - старше");
+         excelCell.setCellValue("Р’Р·СЂРѕСЃР»С‹Рµ 18 - СЃС‚Р°СЂС€Рµ");
          
          excelCell = excelRow.createCell(4);
          excelCell = excelRow.getCell(4);
-         excelCell.setCellValue("Дети 0 - 17");
+         excelCell.setCellValue("Р”РµС‚Рё 0 - 17");
          
 
          //
@@ -2218,13 +2218,13 @@ public class Reports {
              
              //24.04.2019
 
-             //Границы Взрослые
+             //Р“СЂР°РЅРёС†С‹ Р’Р·СЂРѕСЃР»С‹Рµ
              adr = new CellRangeAddress(0, i, 3, 3);
              HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
              HSSFRegionUtil.setBorderLeft(CellStyle.BORDER_THIN, adr, sheet, wb);
              HSSFRegionUtil.setBorderRight(CellStyle.BORDER_THIN, adr, sheet, wb);
              HSSFRegionUtil.setBorderBottom(CellStyle.BORDER_THIN, adr, sheet, wb);
-             //Границы Дети 0-17
+             //Р“СЂР°РЅРёС†С‹ Р”РµС‚Рё 0-17
              adr = new CellRangeAddress(0, i, 4, 4);
              HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
              HSSFRegionUtil.setBorderLeft(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -2238,7 +2238,7 @@ public class Reports {
 
          
          
-         //============================================ДНЕВНОЙ СТАЦИОНАР ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'============================================
+         //============================================Р”РќР•Р’РќРћР™ РЎРўРђР¦РРћРќРђР  Р›РРЎРў 'РћРџР РћРЁР•РќРќР«Р• Р›РџРЈ'============================================
          
          Map<String, List<SurvayDaystacionar>> countOnMOds = new HashMap<String, List<SurvayDaystacionar>>();
          
@@ -2246,7 +2246,7 @@ public class Reports {
          {
         	 for (int j = 0; j < forOneOrgDayStac.get(ii).size(); j++)
         	 {
-        		 // вычисляем количество проанкетированных в разрезе мо и юзера 
+        		 // РІС‹С‡РёСЃР»СЏРµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕР°РЅРєРµС‚РёСЂРѕРІР°РЅРЅС‹С… РІ СЂР°Р·СЂРµР·Рµ РјРѕ Рё СЋР·РµСЂР° 
         		 SurvayDaystacionar ds = forOneOrgDayStac.get(ii).get(j);
                   String key = ds.getMoDayStac()+"!"+ds.getPolzovateldaystacionar();
     
@@ -2267,7 +2267,7 @@ public class Reports {
          excelRow = sheet.getRow(i+1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ДС");
+         excelCell.setCellValue("Р”РЎ");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(i+1,i+1,0,1));
@@ -2282,11 +2282,11 @@ public class Reports {
          excelRow = sheet.getRow(i+2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Р›РџРЈ");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ");
          
          adr = new CellRangeAddress(i+2, i+2, 0, 0);
          HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -2342,7 +2342,7 @@ public class Reports {
 	         }
         
          
-         //============================================СТАЦИОНАР ЛИСТ 'ОПРОШЕННЫЕ ЛПУ'============================================
+         //============================================РЎРўРђР¦РРћРќРђР  Р›РРЎРў 'РћРџР РћРЁР•РќРќР«Р• Р›РџРЈ'============================================
 		 
 		 Map<String,List<SurvayStacionar>> groupByStac = new HashMap<String, List<SurvayStacionar>>();
 		 
@@ -2368,7 +2368,7 @@ public class Reports {
          excelRow = sheet.getRow(i+1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("С");
+         excelCell.setCellValue("РЎ");
          style2.setAlignment(CellStyle.ALIGN_CENTER);
          excelCell.setCellStyle(style2);
          sheet.addMergedRegion(new CellRangeAddress(i+1,i+1,0,1));
@@ -2383,11 +2383,11 @@ public class Reports {
          excelRow = sheet.getRow(i+2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("ЛПУ");
+         excelCell.setCellValue("Р›РџРЈ");
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("Организация");
+         excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ");
          
          adr = new CellRangeAddress(i+2, i+2, 0, 0);
          HSSFRegionUtil.setBorderTop(CellStyle.BORDER_THIN, adr, sheet, wb);
@@ -2446,8 +2446,8 @@ public class Reports {
          sheet.autoSizeColumn(1);
          
            
-         // ===================================================Лист 3 Форма ПГ1==============================================================================================
-         sheet = wb.createSheet("форма №ПГ-1");
+         // ===================================================Р›РёСЃС‚ 3 Р¤РѕСЂРјР° РџР“1==============================================================================================
+         sheet = wb.createSheet("С„РѕСЂРјР° в„–РџР“-1");
          
          sheet.setColumnWidth(0, 19000);
          sheet.setColumnWidth(1, 3000);
@@ -2461,19 +2461,19 @@ public class Reports {
          excelRow = sheet.getRow(0);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+         excelCell.setCellValue("РњРµРґ. РѕСЂРіР°РЅРёР·Р°С†РёСЏ: "+ paramonepart.getLpu());
          
          excelRow = sheet.createRow(1);
          excelRow = sheet.getRow(1);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+         excelCell.setCellValue("РџРµСЂРёРѕРґ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
          
          excelRow = sheet.createRow(2);
          excelRow = sheet.getRow(2);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+         excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ: "+ user.replace("!", " "));
          
          titleFont.setFontHeightInPoints((short)12);
          titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -2488,7 +2488,7 @@ public class Reports {
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
          excelRow.setHeight((short) 500);
-         excelCell.setCellValue("Удовлетворенность объемом, доступностью и качеством медицинской помощи");
+         excelCell.setCellValue("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ РѕР±СЉРµРјРѕРј, РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ Рё РєР°С‡РµСЃС‚РІРѕРј РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
          sheet.addMergedRegion(new CellRangeAddress(3, 3, 0, 6));
          excelCell.setCellStyle(style);
          
@@ -2497,44 +2497,44 @@ public class Reports {
          excelRow.setHeight((short) 1000);
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Результаты социологического опроса");
+         excelCell.setCellValue("Р РµР·СѓР»СЊС‚Р°С‚С‹ СЃРѕС†РёРѕР»РѕРіРёС‡РµСЃРєРѕРіРѕ РѕРїСЂРѕСЃР°");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(1);
          excelCell = excelRow.getCell(1);
-         excelCell.setCellValue("кол-во");
+         excelCell.setCellValue("РєРѕР»-РІРѕ");
          excelCell.setCellStyle(style);
 
          excelCell = excelRow.createCell(2);
          excelCell = excelRow.getCell(2);
-         excelCell.setCellValue("удовлетворены качеством мед помощи");
+         excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј РјРµРґ РїРѕРјРѕС‰Рё");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(3);
          excelCell = excelRow.getCell(3);
-         excelCell.setCellValue("не удовлетворены качеством мед помощи");
+         excelCell.setCellValue("РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј РјРµРґ РїРѕРјРѕС‰Рё");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(4);
          excelCell = excelRow.getCell(4);
-         excelCell.setCellValue("больше удовлетворены, чем неудовлетворены");
+         excelCell.setCellValue("Р±РѕР»СЊС€Рµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹, С‡РµРј РЅРµСѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(5);
          excelCell = excelRow.getCell(5);
-         excelCell.setCellValue("удовлетворены не в полной мере");
+         excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РЅРµ РІ РїРѕР»РЅРѕР№ РјРµСЂРµ");
          excelCell.setCellStyle(style);
          
          excelCell = excelRow.createCell(6);
          excelCell = excelRow.getCell(6);
-         excelCell.setCellValue("затруднились ответить");
+         excelCell.setCellValue("Р·Р°С‚СЂСѓРґРЅРёР»РёСЃСЊ РѕС‚РІРµС‚РёС‚СЊ");
          excelCell.setCellStyle(style);
          
          excelRow = sheet.createRow(6);
          excelRow = sheet.getRow(6);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("Количество опрошенных застрахованных по вопросам КМП, всего, в том числе");
+         excelCell.setCellValue("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… Р·Р°СЃС‚СЂР°С…РѕРІР°РЅРЅС‹С… РїРѕ РІРѕРїСЂРѕСЃР°Рј РљРњРџ, РІСЃРµРіРѕ, РІ С‚РѕРј С‡РёСЃР»Рµ");
          
          ReportPg1 reportpg1 = pg1fromcount(forOneOrgClinic,forOneOrgDayStac,forOneOrgStac);
          ReportPg1 reportpg2 = null;
@@ -2569,7 +2569,7 @@ public class Reports {
          if (paramonepart.getPlus_twolevel().equals("true")){
         	 excelCell.setCellValue(reportpg1.getTotalTotalydl() + reportpg2.getTotalTotalydl());
          }
-         //22.04.2019 здесь работает
+         //22.04.2019 Р·РґРµСЃСЊ СЂР°Р±РѕС‚Р°РµС‚
          else if (paramonepart.getPlus_onlytwolevel().equals("true")){
         	 excelCell.setCellValue(reportpg1.getTotalTotalydl());
          }
@@ -2656,7 +2656,7 @@ public class Reports {
          excelRow = sheet.getRow(7);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении стационарной медицинской помощи");
+         excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
          
          excelRow = sheet.getRow(7);		
          excelCell = excelRow.createCell(1);
@@ -2726,7 +2726,7 @@ public class Reports {
          excelRow = sheet.getRow(8);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении стационарно-замещающей медицинской помощи");
+         excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕ-Р·Р°РјРµС‰Р°СЋС‰РµР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
          
          excelRow = sheet.getRow(8);		
          excelCell = excelRow.createCell(1);
@@ -2791,7 +2791,7 @@ public class Reports {
          excelRow = sheet.getRow(9);		
          excelCell = excelRow.createCell(0);
          excelCell = excelRow.getCell(0);
-         excelCell.setCellValue("при получении амбулаторно-поликлинической медицинской помощи");
+         excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё Р°РјР±СѓР»Р°С‚РѕСЂРЅРѕ-РїРѕР»РёРєР»РёРЅРёС‡РµСЃРєРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
          
          excelRow = sheet.getRow(9);		
          excelCell = excelRow.createCell(1);
@@ -2866,8 +2866,8 @@ public class Reports {
 
 
              
-          // ===================================================Лист 4 Форма ПГ2==============================================================================================
-             sheet = wb.createSheet("форма №ПГ-2");
+          // ===================================================Р›РёСЃС‚ 4 Р¤РѕСЂРјР° РџР“2==============================================================================================
+             sheet = wb.createSheet("С„РѕСЂРјР° в„–РџР“-2");
              
              sheet.setColumnWidth(0, 4000);
              sheet.setColumnWidth(1, 4000);
@@ -2882,19 +2882,19 @@ public class Reports {
              excelRow = sheet.getRow(1);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+             excelCell.setCellValue("РџРµСЂРёРѕРґ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
              
              excelRow = sheet.createRow(2);
              excelRow = sheet.getRow(2);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+             excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ: "+ user.replace("!", " "));
              
              excelRow = sheet.createRow(3);
              excelRow = sheet.getRow(3);		
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+             excelCell.setCellValue("РњРµРґ. РѕСЂРіР°РЅРёР·Р°С†РёСЏ: "+ paramonepart.getLpu());
              
              titleFont.setFontHeightInPoints((short)12);
              titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -2909,7 +2909,7 @@ public class Reports {
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
              excelRow.setHeight((short) 500);
-             excelCell.setCellValue("Удовлетворенность качеством медицинской помощи по показателям, %");
+             excelCell.setCellValue("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ РєР°С‡РµСЃС‚РІРѕРј РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё РїРѕ РїРѕРєР°Р·Р°С‚РµР»СЏРј, %");
              sheet.addMergedRegion(new CellRangeAddress(4, 4, 0, 7));
              excelCell.setCellStyle(style);
 
@@ -2923,14 +2923,14 @@ public class Reports {
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
              excelCell.getCellStyle().setVerticalAlignment(CellStyle.VERTICAL_CENTER);
-             excelCell.setCellValue("при амбулаторно-поликлиническом лечении");
+             excelCell.setCellValue("РїСЂРё Р°РјР±СѓР»Р°С‚РѕСЂРЅРѕ-РїРѕР»РёРєР»РёРЅРёС‡РµСЃРєРѕРј Р»РµС‡РµРЅРёРё");
              sheet.addMergedRegion(new CellRangeAddress(5, 5, 0, 3));
              excelCell.setCellStyle(style77);
              
              excelRow = sheet.getRow(5);		
              excelCell = excelRow.createCell(4);
              excelCell = excelRow.getCell(4);
-             excelCell.setCellValue("при стационарном лечении");
+             excelCell.setCellValue("РїСЂРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕРј Р»РµС‡РµРЅРёРё");
              sheet.addMergedRegion(new CellRangeAddress(5, 5, 4, 7));
              excelCell.setCellStyle(style77);
              
@@ -2947,49 +2947,49 @@ public class Reports {
              excelRow.setHeight((short) 2000);
              excelCell = excelRow.createCell(0);
              excelCell = excelRow.getCell(0);
-             excelCell.setCellValue("длительность ожидания в регистратуре,на прием к врачу,при записи на лабораторные и (или) инструментальные исследования");
+             excelCell.setCellValue("РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР¶РёРґР°РЅРёСЏ РІ СЂРµРіРёСЃС‚СЂР°С‚СѓСЂРµ,РЅР° РїСЂРёРµРј Рє РІСЂР°С‡Сѓ,РїСЂРё Р·Р°РїРёСЃРё РЅР° Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹Рµ Рё (РёР»Рё) РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°Р»СЊРЅС‹Рµ РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(1);
              excelCell = excelRow.getCell(1);
-             excelCell.setCellValue("удовлетворенность работой врачей");
+             excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ СЂР°Р±РѕС‚РѕР№ РІСЂР°С‡РµР№");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(2);
              excelCell = excelRow.getCell(2);
-             excelCell.setCellValue("доступность врачей-специальстов");
+             excelCell.setCellValue("РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РІСЂР°С‡РµР№-СЃРїРµС†РёР°Р»СЊСЃС‚РѕРІ");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(3);
              excelCell = excelRow.getCell(3);
-             excelCell.setCellValue("уровень технического оснащения медицинских учреждений");
+             excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ С‚РµС…РЅРёС‡РµСЃРєРѕРіРѕ РѕСЃРЅР°С‰РµРЅРёСЏ РјРµРґРёС†РёРЅСЃРєРёС… СѓС‡СЂРµР¶РґРµРЅРёР№");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(4);
              excelCell = excelRow.getCell(4);
-             excelCell.setCellValue("длительность ожидания госпитализации");
+             excelCell.setCellValue("РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР¶РёРґР°РЅРёСЏ РіРѕСЃРїРёС‚Р°Р»РёР·Р°С†РёРё");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(5);
              excelCell = excelRow.getCell(5);
-             excelCell.setCellValue("уровень удовлетворенности питанием");
+             excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚Рё РїРёС‚Р°РЅРёРµРј");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(6);
              excelCell = excelRow.getCell(6);
-             excelCell.setCellValue("уровень обеспеченности лекарственными средствами и изделиями медицинского назначения, расходными материалами");
+             excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ РѕР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚Рё Р»РµРєР°СЂСЃС‚РІРµРЅРЅС‹РјРё СЃСЂРµРґСЃС‚РІР°РјРё Рё РёР·РґРµР»РёСЏРјРё РјРµРґРёС†РёРЅСЃРєРѕРіРѕ РЅР°Р·РЅР°С‡РµРЅРёСЏ, СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё");
              excelCell.setCellStyle(style2);
              
              excelRow = sheet.getRow(6);		
              excelCell = excelRow.createCell(7);
              excelCell = excelRow.getCell(7);
-             excelCell.setCellValue("уровень оснащенности учреждения лечебно-диагностическим и материально-бытовым оборудованием");
+             excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ РѕСЃРЅР°С‰РµРЅРЅРѕСЃС‚Рё СѓС‡СЂРµР¶РґРµРЅРёСЏ Р»РµС‡РµР±РЅРѕ-РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёРј Рё РјР°С‚РµСЂРёР°Р»СЊРЅРѕ-Р±С‹С‚РѕРІС‹Рј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј");
              excelCell.setCellStyle(style2);
              
             ReportPg2 pg2 =  null;          
@@ -3088,35 +3088,35 @@ public class Reports {
     {
     	List<String> ls = new ArrayList<String>();
     	
-    	ls.add("Организацией записи на прием к врачу");// п
-    	ls.add("Временем ожидания приема врача");//п
-    	ls.add("Сроками ожидания медицинских услуг после записи");// п
-    	ls.add("Доступностью необходимых лабораторных исследований/анализов");//п
-    	ls.add("Доступностью диагностических исследований (ЭКГ, УЗИ и т.д.)"); // п
-    	ls.add("Доступностью мед.помощи терапевтов"); // п
-    	ls.add("Доступностью мед.помощи врачей-специалистов");// п
-    	ls.add("Работой врачей в поликлинике");// п
+    	ls.add("РћСЂРіР°РЅРёР·Р°С†РёРµР№ Р·Р°РїРёСЃРё РЅР° РїСЂРёРµРј Рє РІСЂР°С‡Сѓ");// Рї
+    	ls.add("Р’СЂРµРјРµРЅРµРј РѕР¶РёРґР°РЅРёСЏ РїСЂРёРµРјР° РІСЂР°С‡Р°");//Рї
+    	ls.add("РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі РїРѕСЃР»Рµ Р·Р°РїРёСЃРё");// Рї
+    	ls.add("Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РЅРµРѕР±С…РѕРґРёРјС‹С… Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹С… РёСЃСЃР»РµРґРѕРІР°РЅРёР№/Р°РЅР°Р»РёР·РѕРІ");//Рї
+    	ls.add("Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёС… РёСЃСЃР»РµРґРѕРІР°РЅРёР№ (Р­РљР“, РЈР—Р Рё С‚.Рґ.)"); // Рї
+    	ls.add("Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё С‚РµСЂР°РїРµРІС‚РѕРІ"); // Рї
+    	ls.add("Р”РѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ РјРµРґ.РїРѕРјРѕС‰Рё РІСЂР°С‡РµР№-СЃРїРµС†РёР°Р»РёСЃС‚РѕРІ");// Рї
+    	ls.add("Р Р°Р±РѕС‚РѕР№ РІСЂР°С‡РµР№ РІ РїРѕР»РёРєР»РёРЅРёРєРµ");// Рї
     	
-    	ls.add("Насколько Вы удовлетворены качеством бесплатной медицинской помощи");
-    	ls.add("Техническим состоянием, ремонтом помещений, площадью помещений");
-    	ls.add("Оснащенностью современным медицинским оборудованием");
-    	ls.add("Всего количество опрошенных респондентов амбл.-поликлин. помощи (кол чел)");// п
-    	ls.add("Требуется опросить амбл.-поликлин. помощи (кол чел)");// п
+    	ls.add("РќР°СЃРєРѕР»СЊРєРѕ Р’С‹ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј Р±РµСЃРїР»Р°С‚РЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
+    	ls.add("РўРµС…РЅРёС‡РµСЃРєРёРј СЃРѕСЃС‚РѕСЏРЅРёРµРј, СЂРµРјРѕРЅС‚РѕРј РїРѕРјРµС‰РµРЅРёР№, РїР»РѕС‰Р°РґСЊСЋ РїРѕРјРµС‰РµРЅРёР№");
+    	ls.add("РћСЃРЅР°С‰РµРЅРЅРѕСЃС‚СЊСЋ СЃРѕРІСЂРµРјРµРЅРЅС‹Рј РјРµРґРёС†РёРЅСЃРєРёРј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј");
+    	ls.add("Р’СЃРµРіРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ Р°РјР±Р».-РїРѕР»РёРєР»РёРЅ. РїРѕРјРѕС‰Рё (РєРѕР» С‡РµР»)");// Рї
+    	ls.add("РўСЂРµР±СѓРµС‚СЃСЏ РѕРїСЂРѕСЃРёС‚СЊ Р°РјР±Р».-РїРѕР»РёРєР»РёРЅ. РїРѕРјРѕС‰Рё (РєРѕР» С‡РµР»)");// Рї
     	
-    	ls.add("Комфортностью больничной палаты и мест пребывания пациентов");// дс
-    	ls.add("Комплексом предоставляемых медицинских услуг");// дс
+    	ls.add("РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ");// РґСЃ
+    	ls.add("РљРѕРјРїР»РµРєСЃРѕРј РїСЂРµРґРѕСЃС‚Р°РІР»СЏРµРјС‹С… РјРµРґРёС†РёРЅСЃРєРёС… СѓСЃР»СѓРі");// РґСЃ
     	
-    	ls.add("Работой вспомогательных служб (лаборатория, рентген-кабинет, физиотерапевтический кабинет и т.д.)");// дс с
-    	ls.add("Обеспеченностью медикаментами и расходными материалами");// дс с
-    	ls.add("Работой лечащего врача");// дс с
-    	ls.add("Всего количество опрошенных респондентов дневного стационара (кол чел)");// дс
-    	ls.add("Требуется опросить респондентов из дневного стационара (кол чел)");// дс
+    	ls.add("Р Р°Р±РѕС‚РѕР№ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»СѓР¶Р± (Р»Р°Р±РѕСЂР°С‚РѕСЂРёСЏ, СЂРµРЅС‚РіРµРЅ-РєР°Р±РёРЅРµС‚, С„РёР·РёРѕС‚РµСЂР°РїРµРІС‚РёС‡РµСЃРєРёР№ РєР°Р±РёРЅРµС‚ Рё С‚.Рґ.)");// РґСЃ СЃ
+    	ls.add("РћР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚СЊСЋ РјРµРґРёРєР°РјРµРЅС‚Р°РјРё Рё СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё");// РґСЃ СЃ
+    	ls.add("Р Р°Р±РѕС‚РѕР№ Р»РµС‡Р°С‰РµРіРѕ РІСЂР°С‡Р°");// РґСЃ СЃ
+    	ls.add("Р’СЃРµРіРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ РґРЅРµРІРЅРѕРіРѕ СЃС‚Р°С†РёРѕРЅР°СЂР° (РєРѕР» С‡РµР»)");// РґСЃ
+    	ls.add("РўСЂРµР±СѓРµС‚СЃСЏ РѕРїСЂРѕСЃРёС‚СЊ СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ РёР· РґРЅРµРІРЅРѕРіРѕ СЃС‚Р°С†РёРѕРЅР°СЂР° (РєРѕР» С‡РµР»)");// РґСЃ
     	
-    	ls.add("Комфортностью больничной палаты и мест пребывания пациентов"); // c 
-    	ls.add("Питание"); // c 
-    	ls.add("Сроками ожидания плановой госпитализации"); // c
-    	ls.add("Всего количество опрошенных респондентов стационарной помощи (кол чел)");// c
-    	ls.add("Требуется опросить стационарной помощи (кол чел)");// c
+    	ls.add("РљРѕРјС„РѕСЂС‚РЅРѕСЃС‚СЊСЋ Р±РѕР»СЊРЅРёС‡РЅРѕР№ РїР°Р»Р°С‚С‹ Рё РјРµСЃС‚ РїСЂРµР±С‹РІР°РЅРёСЏ РїР°С†РёРµРЅС‚РѕРІ"); // c 
+    	ls.add("РџРёС‚Р°РЅРёРµ"); // c 
+    	ls.add("РЎСЂРѕРєР°РјРё РѕР¶РёРґР°РЅРёСЏ РїР»Р°РЅРѕРІРѕР№ РіРѕСЃРїРёС‚Р°Р»РёР·Р°С†РёРё"); // c
+    	ls.add("Р’СЃРµРіРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… СЂРµСЃРїРѕРЅРґРµРЅС‚РѕРІ СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕР№ РїРѕРјРѕС‰Рё (РєРѕР» С‡РµР»)");// c
+    	ls.add("РўСЂРµР±СѓРµС‚СЃСЏ РѕРїСЂРѕСЃРёС‚СЊ СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕР№ РїРѕРјРѕС‰Рё (РєРѕР» С‡РµР»)");// c
     	
     	return ls;
     }
@@ -4372,15 +4372,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgClinic.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalyydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalallneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Затрудняюсь ответить"))
+				if(forOneOrgClinic.get(i).get(j).getFreeHelp().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 					totalTotaldificalt++;
 				
 			}
@@ -4395,15 +4395,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgDayStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgDayStac.get(i).size(); j++) {
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalyydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalallneydl++;
-				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Затрудняюсь ответить"))
+				if(forOneOrgDayStac.get(i).get(j).getQualityDaystac().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 					totalTotaldificalt++;
 			}
 		}
@@ -4418,15 +4418,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalyydl++;	
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalallneydl++;
-				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Затрудняюсь ответить"))
+				if(forOneOrgStac.get(i).get(j).getQualityStac().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 					totalTotaldificalt++;
 			}
 		}
@@ -4474,61 +4474,61 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-					// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+					// ============	РІСЃРµ СЌС‚Рё РІРѕРїСЂРѕСЃС‹ РїРѕРґРїР°РґР°СЋС‚ РїРѕРґ РѕРґРёРЅ РїСѓРЅРєС‚ РѕС‚С‡РµС‚Р°	==========================================
 				
-					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item1++;
-					
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Удовлетворен(а)"))
-					item1++;
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item1++;
+					
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item1++;
+					if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item2++;
-					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item2++;
-					
-					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Удовлетворен(а)"))
-					item2++;
-					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getTherapist().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item2++;
 					
-					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item2++;
+					if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item2++;
+					
+					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item3++;
-					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item3++;
 					
-					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getRepairs().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
 					
-					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getEquipment().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
 						
 			}
 			
-			// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+			// ================================	РІС‹С‡РёСЃР»СЏРµРј РѕР±С‰СѓСЋ СЃСѓРјРјСѓ СЌС‚РёС… РІРѕРїСЂРѕСЃРѕРІ СЃРѕ РІСЃРµРјРё РІР°СЂРёР°РЅС‚Р°РјРё РѕС‚РІРµС‚Р°======================================			
 			allclinic1 = allclinic1 + forOneOrgClinic.get(i).size()*5;
 			allclinic2 = allclinic2 + forOneOrgClinic.get(i).size()*2;
 			allclinic3 = allclinic3 + forOneOrgClinic.get(i).size()*1;
@@ -4556,39 +4556,39 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 				
-				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item5++;
-				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getTermsStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item5++;
 				
-				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item6++;
-				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getFoodStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item6++;
 				
-				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item7++;
-				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item7++;
 				
-				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-				item8++;
-				
-				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Удовлетворен(а)"))
-				item8++;
-				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+				item8++;
+				
+				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+				item8++;
+				if(forOneOrgStac.get(i).get(j).getComfortStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
 				
@@ -4647,61 +4647,61 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-					// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+					// ============	РІСЃРµ СЌС‚Рё РІРѕРїСЂРѕСЃС‹ РїРѕРґРїР°РґР°СЋС‚ РїРѕРґ РѕРґРёРЅ РїСѓРЅРєС‚ РѕС‚С‡РµС‚Р°	==========================================
 				
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item1++;
-					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Удовлетворен(а)"))
-					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item1++;
+					
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item1++;
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item1++;
 						
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item2++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item2++;
-					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Удовлетворен(а)"))
-					item2++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item2++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item2++;
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item2++;
+					
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item3++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item3++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
 					
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
-					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item4++;
 						
 			}
 			
-			// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+			// ================================	РІС‹С‡РёСЃР»СЏРµРј РѕР±С‰СѓСЋ СЃСѓРјРјСѓ СЌС‚РёС… РІРѕРїСЂРѕСЃРѕРІ СЃРѕ РІСЃРµРјРё РІР°СЂРёР°РЅС‚Р°РјРё РѕС‚РІРµС‚Р°======================================			
 			allclinic1 = allclinic1 + forOneOrgClinic.get(i).size()*5;
 			allclinic2 = allclinic2 + forOneOrgClinic.get(i).size()*2;
 			allclinic3 = allclinic3 + forOneOrgClinic.get(i).size()*1;
@@ -4729,39 +4729,39 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item5++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item5++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item6++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item6++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item7++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item7++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-				item8++;
-				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Удовлетворен(а)"))
-				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+				item8++;
+				
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+				item8++;
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				item8++;
 				
 				
@@ -4793,8 +4793,8 @@ public class Reports {
 	}
 	
 	/*
-	 * Метод отрабатывает при условии что нажат checkbox
-	 * "вместе с вторым уровнем"
+	 * РњРµС‚РѕРґ РѕС‚СЂР°Р±Р°С‚С‹РІР°РµС‚ РїСЂРё СѓСЃР»РѕРІРёРё С‡С‚Рѕ РЅР°Р¶Р°С‚ checkbox
+	 * "РІРјРµСЃС‚Рµ СЃ РІС‚РѕСЂС‹Рј СѓСЂРѕРІРЅРµРј"
 	 */
 	private ReportPg2 pg2from_all_levels(
 			List<List<SurvayClinic>> forOneOrgClinic,List<List<SurvayStacionar>> forOneOrgStac,
@@ -4824,56 +4824,56 @@ public class Reports {
 				
 				for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 					
-						// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+						// ============	РІСЃРµ СЌС‚Рё РІРѕРїСЂРѕСЃС‹ РїРѕРґРїР°РґР°СЋС‚ РїРѕРґ РѕРґРёРЅ РїСѓРЅРєС‚ РѕС‚С‡РµС‚Р°	==========================================
 					
-						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item1++;
-						
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Удовлетворен(а)"))
-						item1++;
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getSeeADoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 						
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item1++;
+						
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item1++;
+						if(forOneOrgClinic.get(i).get(j).getWaitingTime2().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 							
-						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getLaboratoryResearch().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 						
-						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getDiagnosticTests().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 							
-						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item2++;
-						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item2++;
-						
-						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Удовлетворен(а)"))
-						item2++;
-						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getTherapist().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item2++;
 						
-						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item2++;
+						if(forOneOrgClinic.get(i).get(j).getClinicDoctor().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item2++;
+						
+						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item3++;
-						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getMedicalSpecialists().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item3++;
 						
-						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
-						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getRepairs().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
 						
-						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
-						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic.get(i).get(j).getEquipment().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
 							
 				}
@@ -4890,7 +4890,7 @@ public class Reports {
 			System.out.println("@@@@3 "+allclinic3+" "+ item3);
 			System.out.println("@@@@4 "+allclinic4+" "+ item4);
 			
-			// ================================	второй уровень======================================			
+			// ================================	РІС‚РѕСЂРѕР№ СѓСЂРѕРІРµРЅСЊ======================================			
 			
 			
 
@@ -4898,61 +4898,61 @@ public class Reports {
 				
 				for (int j = 0; j < forOneOrgClinic2.get(i).size(); j++) {
 					
-						// ============	все эти вопросы подпадают под один пункт отчета	==========================================
+						// ============	РІСЃРµ СЌС‚Рё РІРѕРїСЂРѕСЃС‹ РїРѕРґРїР°РґР°СЋС‚ РїРѕРґ РѕРґРёРЅ РїСѓРЅРєС‚ РѕС‚С‡РµС‚Р°	==========================================
 					
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item1++;
-						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Удовлетворен(а)"))
-						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_6_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_7_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item1++;
+						
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item1++;
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_8_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 							
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_9_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_10_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item1++;
 							
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item2++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-						item2++;
-						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Удовлетворен(а)"))
-						item2++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_11_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item2++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item2++;
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_15_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+						item2++;
+						
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item3++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_12_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item3++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_1_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
 						
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
-						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+						if(forOneOrgClinic2.get(i).get(j).getSurvayClinicSec2().getQuestion20_4_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 						item4++;
 							
 				}
 				
-				// ================================	вычисляем общую сумму этих вопросов со всеми вариантами ответа======================================			
+				// ================================	РІС‹С‡РёСЃР»СЏРµРј РѕР±С‰СѓСЋ СЃСѓРјРјСѓ СЌС‚РёС… РІРѕРїСЂРѕСЃРѕРІ СЃРѕ РІСЃРµРјРё РІР°СЂРёР°РЅС‚Р°РјРё РѕС‚РІРµС‚Р°======================================			
 				allclinic1 = allclinic1 + forOneOrgClinic2.get(i).size()*5;
 				allclinic2 = allclinic2 + forOneOrgClinic2.get(i).size()*2;
 				allclinic3 = allclinic3 + forOneOrgClinic2.get(i).size()*1;
@@ -4982,45 +4982,45 @@ public class Reports {
 			allclinic4 = Math.round(allclinic4 * 100);
 			pg2.setItem4(allclinic4);
 			
-			//===============================первый уровень===========================================
+			//===============================РїРµСЂРІС‹Р№ СѓСЂРѕРІРµРЅСЊ===========================================
 			
 			for (int i = 0; i < forOneOrgStac.size(); i++) {
 				
 				for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
 					
-					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item5++;
-					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getTermsStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item5++;
 					
-					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item6++;
-					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getFoodStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item6++;
 					
-					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item7++;
-					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getMedicineStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item7++;
 					
-					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item8++;
-					
-					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Удовлетворен(а)"))
-					item8++;
-					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getRapairsStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
-					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getEquipmentStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
-					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac.get(i).get(j).getLaboratoryStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item8++;
+					
+					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item8++;
+					if(forOneOrgStac.get(i).get(j).getComfortStac().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
 					
@@ -5038,44 +5038,44 @@ public class Reports {
 			System.out.println("@@@@4_4 "+stac4+" "+ item8);
 			
 			System.out.println("TTTT "+forOneOrgStac2);
-			//================================второй уровень===========================================
+			//================================РІС‚РѕСЂРѕР№ СѓСЂРѕРІРµРЅСЊ===========================================
 			for (int i = 0; i < forOneOrgStac2.size(); i++) {
 				
 				for (int j = 0; j < forOneOrgStac2.get(i).size(); j++) {
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item5++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_9sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item5++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item6++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_6sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item6++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item7++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_8sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item7++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
-					item8++;
-					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Удовлетворен(а)"))
-					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_1sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_7sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
-					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_17sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item8++;
+					
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
+					item8++;
+					if(forOneOrgStac2.get(i).get(j).getScsslsec1().getQuestionS9_2sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					item8++;
 					
 					
@@ -5131,8 +5131,8 @@ public class Reports {
     
 
     
-    // ===================================================Лист 3 Форма ПГ1==============================================================================================
-    sheet = wb.createSheet("форма №ПГ-1");
+    // ===================================================Р›РёСЃС‚ 3 Р¤РѕСЂРјР° РџР“1==============================================================================================
+    sheet = wb.createSheet("С„РѕСЂРјР° в„–РџР“-1");
     
     CellStyle style;
     Font titleFont = wb.createFont();
@@ -5168,19 +5168,19 @@ public class Reports {
     excelRow = sheet.getRow(0);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+    excelCell.setCellValue("РњРµРґ. РѕСЂРіР°РЅРёР·Р°С†РёСЏ: "+ paramonepart.getLpu());
     
     excelRow = sheet.createRow(1);
     excelRow = sheet.getRow(1);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+    excelCell.setCellValue("РџРµСЂРёРѕРґ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
     
     excelRow = sheet.createRow(2);
     excelRow = sheet.getRow(2);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+    excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ: "+ user.replace("!", " "));
     
     titleFont.setFontHeightInPoints((short)12);
     titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -5195,7 +5195,7 @@ public class Reports {
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
     excelRow.setHeight((short) 500);
-    excelCell.setCellValue("Удовлетворенность объемом, доступностью и качеством медицинской помощи");
+    excelCell.setCellValue("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ РѕР±СЉРµРјРѕРј, РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊСЋ Рё РєР°С‡РµСЃС‚РІРѕРј РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
     sheet.addMergedRegion(new CellRangeAddress(3, 3, 0, 6));
     excelCell.setCellStyle(style);
     
@@ -5204,44 +5204,44 @@ public class Reports {
     excelRow.setHeight((short) 1000);
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Результаты социологического опроса");
+    excelCell.setCellValue("Р РµР·СѓР»СЊС‚Р°С‚С‹ СЃРѕС†РёРѕР»РѕРіРёС‡РµСЃРєРѕРіРѕ РѕРїСЂРѕСЃР°");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(1);
     excelCell = excelRow.getCell(1);
-    excelCell.setCellValue("кол-во");
+    excelCell.setCellValue("РєРѕР»-РІРѕ");
     excelCell.setCellStyle(style);
 
     excelCell = excelRow.createCell(2);
     excelCell = excelRow.getCell(2);
-    excelCell.setCellValue("удовлетворены качеством мед помощи");
+    excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј РјРµРґ РїРѕРјРѕС‰Рё");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(3);
     excelCell = excelRow.getCell(3);
-    excelCell.setCellValue("не удовлетворены качеством мед помощи");
+    excelCell.setCellValue("РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РєР°С‡РµСЃС‚РІРѕРј РјРµРґ РїРѕРјРѕС‰Рё");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(4);
     excelCell = excelRow.getCell(4);
-    excelCell.setCellValue("больше удовлетворены, чем неудовлетворены");
+    excelCell.setCellValue("Р±РѕР»СЊС€Рµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹, С‡РµРј РЅРµСѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(5);
     excelCell = excelRow.getCell(5);
-    excelCell.setCellValue("удовлетворены не в полной мере");
+    excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅС‹ РЅРµ РІ РїРѕР»РЅРѕР№ РјРµСЂРµ");
     excelCell.setCellStyle(style);
     
     excelCell = excelRow.createCell(6);
     excelCell = excelRow.getCell(6);
-    excelCell.setCellValue("затруднились ответить");
+    excelCell.setCellValue("Р·Р°С‚СЂСѓРґРЅРёР»РёСЃСЊ РѕС‚РІРµС‚РёС‚СЊ");
     excelCell.setCellStyle(style);
     
     excelRow = sheet.createRow(6);
     excelRow = sheet.getRow(6);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("Количество опрошенных застрахованных по вопросам КМП, всего, в том числе");
+    excelCell.setCellValue("РљРѕР»РёС‡РµСЃС‚РІРѕ РѕРїСЂРѕС€РµРЅРЅС‹С… Р·Р°СЃС‚СЂР°С…РѕРІР°РЅРЅС‹С… РїРѕ РІРѕРїСЂРѕСЃР°Рј РљРњРџ, РІСЃРµРіРѕ, РІ С‚РѕРј С‡РёСЃР»Рµ");
     
     ReportPg1 reportpg1 = pg1fromsecondreport(forOneOrgClinic,forOneOrgDayStac,forOneOrgStac);
     
@@ -5283,7 +5283,7 @@ public class Reports {
     excelRow = sheet.getRow(7);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении стационарной медицинской помощи");
+    excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
     
     excelRow = sheet.getRow(7);		
     excelCell = excelRow.createCell(1);
@@ -5323,7 +5323,7 @@ public class Reports {
     excelRow = sheet.getRow(8);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении стационарно-замещающей медицинской помощи");
+    excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕ-Р·Р°РјРµС‰Р°СЋС‰РµР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
     
     excelRow = sheet.getRow(8);		
     excelCell = excelRow.createCell(1);
@@ -5363,7 +5363,7 @@ public class Reports {
     excelRow = sheet.getRow(9);		
     excelCell = excelRow.createCell(0);
     excelCell = excelRow.getCell(0);
-    excelCell.setCellValue("при получении амбулаторно-поликлинической медицинской помощи");
+    excelCell.setCellValue("РїСЂРё РїРѕР»СѓС‡РµРЅРёРё Р°РјР±СѓР»Р°С‚РѕСЂРЅРѕ-РїРѕР»РёРєР»РёРЅРёС‡РµСЃРєРѕР№ РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё");
     
     excelRow = sheet.getRow(9);		
     excelCell = excelRow.createCell(1);
@@ -5408,8 +5408,8 @@ public class Reports {
 			}
         }
         
-     // ===================================================Лист 4 Форма ПГ2==============================================================================================
-        sheet = wb.createSheet("форма №ПГ-2");
+     // ===================================================Р›РёСЃС‚ 4 Р¤РѕСЂРјР° РџР“2==============================================================================================
+        sheet = wb.createSheet("С„РѕСЂРјР° в„–РџР“-2");
         
         sheet.setColumnWidth(0, 4000);
         sheet.setColumnWidth(1, 4000);
@@ -5424,19 +5424,19 @@ public class Reports {
         excelRow = sheet.getRow(1);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Период " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
+        excelCell.setCellValue("РџРµСЂРёРѕРґ " + paramonepart.getDatestart()+" - "+paramonepart.getDateend());
         
         excelRow = sheet.createRow(2);
         excelRow = sheet.getRow(2);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Организация: "+ user.replace("!", " "));
+        excelCell.setCellValue("РћСЂРіР°РЅРёР·Р°С†РёСЏ: "+ user.replace("!", " "));
         
         excelRow = sheet.createRow(3);
         excelRow = sheet.getRow(3);		
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("Мед. организация: "+ paramonepart.getLpu());
+        excelCell.setCellValue("РњРµРґ. РѕСЂРіР°РЅРёР·Р°С†РёСЏ: "+ paramonepart.getLpu());
         
         titleFont.setFontHeightInPoints((short)12);
         titleFont.setColor(IndexedColors.DARK_BLUE.getIndex());
@@ -5451,7 +5451,7 @@ public class Reports {
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
         excelRow.setHeight((short) 500);
-        excelCell.setCellValue("Удовлетворенность качеством медицинской помощи по показателям, %");
+        excelCell.setCellValue("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ РєР°С‡РµСЃС‚РІРѕРј РјРµРґРёС†РёРЅСЃРєРѕР№ РїРѕРјРѕС‰Рё РїРѕ РїРѕРєР°Р·Р°С‚РµР»СЏРј, %");
         sheet.addMergedRegion(new CellRangeAddress(4, 4, 0, 7));
         excelCell.setCellStyle(style);
 
@@ -5465,14 +5465,14 @@ public class Reports {
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
         excelCell.getCellStyle().setVerticalAlignment(CellStyle.VERTICAL_CENTER);
-        excelCell.setCellValue("при амбулаторно-поликлиническом лечении");
+        excelCell.setCellValue("РїСЂРё Р°РјР±СѓР»Р°С‚РѕСЂРЅРѕ-РїРѕР»РёРєР»РёРЅРёС‡РµСЃРєРѕРј Р»РµС‡РµРЅРёРё");
         sheet.addMergedRegion(new CellRangeAddress(5, 5, 0, 3));
         excelCell.setCellStyle(style77);
         
         excelRow = sheet.getRow(5);		
         excelCell = excelRow.createCell(4);
         excelCell = excelRow.getCell(4);
-        excelCell.setCellValue("при стационарном лечении");
+        excelCell.setCellValue("РїСЂРё СЃС‚Р°С†РёРѕРЅР°СЂРЅРѕРј Р»РµС‡РµРЅРёРё");
         sheet.addMergedRegion(new CellRangeAddress(5, 5, 4, 7));
         excelCell.setCellStyle(style77);
         
@@ -5489,49 +5489,49 @@ public class Reports {
         excelRow.setHeight((short) 2000);
         excelCell = excelRow.createCell(0);
         excelCell = excelRow.getCell(0);
-        excelCell.setCellValue("длительность ожидания в регистратуре,на прием к врачу,при записи на лабораторные и (или) инструментальные исследования");
+        excelCell.setCellValue("РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР¶РёРґР°РЅРёСЏ РІ СЂРµРіРёСЃС‚СЂР°С‚СѓСЂРµ,РЅР° РїСЂРёРµРј Рє РІСЂР°С‡Сѓ,РїСЂРё Р·Р°РїРёСЃРё РЅР° Р»Р°Р±РѕСЂР°С‚РѕСЂРЅС‹Рµ Рё (РёР»Рё) РёРЅСЃС‚СЂСѓРјРµРЅС‚Р°Р»СЊРЅС‹Рµ РёСЃСЃР»РµРґРѕРІР°РЅРёСЏ");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(1);
         excelCell = excelRow.getCell(1);
-        excelCell.setCellValue("удовлетворенность работой врачей");
+        excelCell.setCellValue("СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚СЊ СЂР°Р±РѕС‚РѕР№ РІСЂР°С‡РµР№");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(2);
         excelCell = excelRow.getCell(2);
-        excelCell.setCellValue("доступность врачей-специальстов");
+        excelCell.setCellValue("РґРѕСЃС‚СѓРїРЅРѕСЃС‚СЊ РІСЂР°С‡РµР№-СЃРїРµС†РёР°Р»СЊСЃС‚РѕРІ");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(3);
         excelCell = excelRow.getCell(3);
-        excelCell.setCellValue("уровень технического оснащения медицинских учреждений");
+        excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ С‚РµС…РЅРёС‡РµСЃРєРѕРіРѕ РѕСЃРЅР°С‰РµРЅРёСЏ РјРµРґРёС†РёРЅСЃРєРёС… СѓС‡СЂРµР¶РґРµРЅРёР№");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(4);
         excelCell = excelRow.getCell(4);
-        excelCell.setCellValue("длительность ожидания госпитализации");
+        excelCell.setCellValue("РґР»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР¶РёРґР°РЅРёСЏ РіРѕСЃРїРёС‚Р°Р»РёР·Р°С†РёРё");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(5);
         excelCell = excelRow.getCell(5);
-        excelCell.setCellValue("уровень удовлетворенности питанием");
+        excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅРЅРѕСЃС‚Рё РїРёС‚Р°РЅРёРµРј");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(6);
         excelCell = excelRow.getCell(6);
-        excelCell.setCellValue("уровень обеспеченности лекарственными средствами и изделиями медицинского назначения, расходными материалами");
+        excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ РѕР±РµСЃРїРµС‡РµРЅРЅРѕСЃС‚Рё Р»РµРєР°СЂСЃС‚РІРµРЅРЅС‹РјРё СЃСЂРµРґСЃС‚РІР°РјРё Рё РёР·РґРµР»РёСЏРјРё РјРµРґРёС†РёРЅСЃРєРѕРіРѕ РЅР°Р·РЅР°С‡РµРЅРёСЏ, СЂР°СЃС…РѕРґРЅС‹РјРё РјР°С‚РµСЂРёР°Р»Р°РјРё");
         excelCell.setCellStyle(style2);
         
         excelRow = sheet.getRow(6);		
         excelCell = excelRow.createCell(7);
         excelCell = excelRow.getCell(7);
-        excelCell.setCellValue("уровень оснащенности учреждения лечебно-диагностическим и материально-бытовым оборудованием");
+        excelCell.setCellValue("СѓСЂРѕРІРµРЅСЊ РѕСЃРЅР°С‰РµРЅРЅРѕСЃС‚Рё СѓС‡СЂРµР¶РґРµРЅРёСЏ Р»РµС‡РµР±РЅРѕ-РґРёР°РіРЅРѕСЃС‚РёС‡РµСЃРєРёРј Рё РјР°С‚РµСЂРёР°Р»СЊРЅРѕ-Р±С‹С‚РѕРІС‹Рј РѕР±РѕСЂСѓРґРѕРІР°РЅРёРµРј");
         excelCell.setCellStyle(style2);
         
        ReportPg2 pg2 =  pg2fromcountSL(forOneOrgClinic,forOneOrgStac);
@@ -5644,15 +5644,15 @@ public class Reports {
 			
 			for (int j = 0; j < forOneOrgClinic.get(i).size(); j++) {
 				
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalyydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Не удовлетворен(а)"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalallneydl++;	
-				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Затрудняюсь ответить"))
+				if(forOneOrgClinic.get(i).get(j).getSurvayClinicSec2().getQuestion12_clinic().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 				totalTotaldificalt++;
 				
 			}
@@ -5671,15 +5671,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgDayStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgDayStac.get(i).size(); j++) {
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalyydl++;	
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Не удовлетворен(а)"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalallneydl++;
-				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Затрудняюсь ответить"))
+				if(forOneOrgDayStac.get(i).get(j).getScdsslsec2().getQuestion7sec2().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 					totalTotaldificalt++;
 			}
 		}
@@ -5694,15 +5694,15 @@ public class Reports {
 		for (int i = 0; i < forOneOrgStac.size(); i++) {
 			
 			for (int j = 0; j < forOneOrgStac.get(i).size(); j++) {
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("РЈРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalydl++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Скорее не удовлетворен(а), чем удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("РЎРєРѕСЂРµРµ РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 				totalTotalneydl++;	
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Скорее удовлетворен(а), чем не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("РЎРєРѕСЂРµРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°), С‡РµРј РЅРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalyydl++;	
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Не удовлетворен(а)"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("РќРµ СѓРґРѕРІР»РµС‚РІРѕСЂРµРЅ(Р°)"))
 					totalTotalallneydl++;
-				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Затрудняюсь ответить"))
+				if(forOneOrgStac.get(i).get(j).getScsslsec1().getQuestionS5sec1().equals("Р—Р°С‚СЂСѓРґРЅСЏСЋСЃСЊ РѕС‚РІРµС‚РёС‚СЊ"))
 					totalTotaldificalt++;
 			}
 		}

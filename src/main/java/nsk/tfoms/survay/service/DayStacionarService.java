@@ -53,17 +53,17 @@ public class DayStacionarService {
 	  
 	  
 	  /*
-	   * block querys for reports дата ограничение на возраст и пол
+	   * block querys for reports РґР°С‚Р° РѕРіСЂР°РЅРёС‡РµРЅРёРµ РЅР° РІРѕР·СЂР°СЃС‚ Рё РїРѕР»
 	   */
 
 	  @Transactional
 	  public List<SurvayDaystacionar> getReport(String d1, String d2,String userp,String sex,Integer age_min,Integer age_max,String lpu) {
 		  String agefor = "p.ageDaystac between "+age_min+" and "+age_max+" ";;
-		  if((sex.equals("Мужской") && age_min >= 60) || (sex.equals("Женский") && age_min >= 55)){	agefor = "p.ageDaystac>= "+age_min+" ";		}
+		  if((sex.equals("РњСѓР¶СЃРєРѕР№") && age_min >= 60) || (sex.equals("Р–РµРЅСЃРєРёР№") && age_min >= 55)){	agefor = "p.ageDaystac>= "+age_min+" ";		}
 		  
 		  String paste="p.moDayStac=:lpu";
 		  // enter ALL we will passing in query NOT "ALL"(p.mo!=:lpu) because in db no records with  name 'ALL' => so we get all records 
-		  if(lpu.equals("Все"))	{	paste="p.moDayStac!=:lpu";	}
+		  if(lpu.equals("Р’СЃРµ"))	{	paste="p.moDayStac!=:lpu";	}
 		  
 		  String []mas = userp.split("!");
 		  String name="(";

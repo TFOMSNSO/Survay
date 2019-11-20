@@ -103,7 +103,7 @@ public class BigReportSL {
 		List<String> lpuList = paramtwopart.getAns();
 		String lpu = "";
 		String lpu_header = "";
-		if(lpuList.contains("¬ÒÂ")){
+		if(lpuList.contains("–í—Å–µ")){
 			File file = new File( servletContext.getRealPath("/WEB-INF/mo.txt"));
 			DataInputStream in = new DataInputStream(new FileInputStream(file));
 			BufferedReader br = new BufferedReader(new InputStreamReader(in));
@@ -116,7 +116,7 @@ public class BigReportSL {
 					lpu_header = lpu_header + vr.substring(2);
 					
 				}
-			mapReport.put("lpu_header", "¬ÒÂ");
+			mapReport.put("lpu_header", "–í—Å–µ");
 			mapReport.put("lpu", lpu);
 			
 		}else{
@@ -143,10 +143,10 @@ public class BigReportSL {
 		
 		
 		for(int i=0; i< list_ansAaS.size(); i++){
-			if (list_ansAaS.get(i).equals("1")){sex_man1 = "ÃÛÊÒÍÓÈ"; age_man1 = "59"; }
-			if (list_ansAaS.get(i).equals("2")){sex_gerl1 = "∆ÂÌÒÍËÈ"; age_gerl1 = "54"; }
-			if (list_ansAaS.get(i).equals("3")){sex_man2 = "ÃÛÊÒÍÓÈ"; age_man2 = "60";}
-			if (list_ansAaS.get(i).equals("4")){sex_gerl2 = "∆ÂÌÒÍËÈ"; age_gerl2 = "55";}
+			if (list_ansAaS.get(i).equals("1")){sex_man1 = "–ú—É–∂—Å–∫–æ–π"; age_man1 = "59"; }
+			if (list_ansAaS.get(i).equals("2")){sex_gerl1 = "–ñ–µ–Ω—Å–∫–∏–π"; age_gerl1 = "54"; }
+			if (list_ansAaS.get(i).equals("3")){sex_man2 = "–ú—É–∂—Å–∫–æ–π"; age_man2 = "60";}
+			if (list_ansAaS.get(i).equals("4")){sex_gerl2 = "–ñ–µ–Ω—Å–∫–∏–π"; age_gerl2 = "55";}
 		}
 			
 		

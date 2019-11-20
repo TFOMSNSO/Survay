@@ -86,7 +86,7 @@ public class DayStacionarSecondLevel {
 		  int idInt = Integer.valueOf(id);
 		  
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<DayStacionarSecondlevel> list = personSvcDssl.getOnId(idInt, user);
 		    
 		    res.setStatus("SUCCESS");

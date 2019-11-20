@@ -17,7 +17,7 @@ public class TimesAndDate
 	
 	
 	/*
-	 * ֿאנסטל האעף טח דדדד-לל-הה ג הה.לל.yyyy
+	 * ׀׀°ׁ€ׁ׀¸׀¼ ׀´׀°ׁ‚ׁƒ ׀¸׀· ׀³׀³׀³׀³-׀¼׀¼-׀´׀´ ׀² ׀´׀´.׀¼׀¼.yyyy
 	 */
 	public static String parseDate(String date) throws ParseException
 	 {

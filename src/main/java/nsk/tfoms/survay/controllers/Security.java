@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class Security {
 
-	private final String ERROR_MESSAGE = "Неправильно введен логин или пароль.";
+	private final String ERROR_MESSAGE = "РќРµРїСЂР°РІРёР»СЊРЅРѕ РІРІРµРґРµРЅ Р»РѕРіРёРЅ РёР»Рё РїР°СЂРѕР»СЊ.";
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	  public String home()

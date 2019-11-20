@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /*
- * Контроллер обрабатывает все что связано с анкетой первого уровня Дневного стационара
+ * РљРѕРЅС‚СЂРѕР»Р»РµСЂ РѕР±СЂР°Р±Р°С‚С‹РІР°РµС‚ РІСЃРµ С‡С‚Рѕ СЃРІСЏР·Р°РЅРѕ СЃ Р°РЅРєРµС‚РѕР№ РїРµСЂРІРѕРіРѕ СѓСЂРѕРІРЅСЏ Р”РЅРµРІРЅРѕРіРѕ СЃС‚Р°С†РёРѕРЅР°СЂР°
  */
 
 @Controller
@@ -32,7 +32,7 @@ public class OneStacionar {
 	  public @ResponseBody nsk.tfoms.survay.util.JsonResponse save(@RequestParam String test) throws ParseException
 	  { 
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayStacionar> list = stacionarService.getAll(test);
 		    for (int i = 0; i < list.size(); i++)
 		    {
@@ -52,26 +52,26 @@ public class OneStacionar {
 	    public @ResponseBody nsk.tfoms.survay.util.JsonResponse chartpie(@RequestParam String test) throws ParseException
 		  { 
 				nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-			    // вытаскиваем из базы 
+			    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 				List<SurvayStacionar> list = stacionarService.getAll(test);
 			    List<Integer> ls = new ArrayList<Integer>();
 			    
 			    int m=0,sh=0,m2=0,sh2=0;
 			    for (int i = 0; i < list.size(); i++)
 			    {
-			    	if(Integer.valueOf(list.get(i).getAgeStac())<=59 && list.get(i).getSexStac().equals("Мужской"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())<=59 && list.get(i).getSexStac().equals("РњСѓР¶СЃРєРѕР№"))
 			    	{
 			    		m++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())<=54 && list.get(i).getSexStac().equals("Женский"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())<=54 && list.get(i).getSexStac().equals("Р–РµРЅСЃРєРёР№"))
 			    	{
 			    		sh++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())>=60 && list.get(i).getSexStac().equals("Мужской"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())>=60 && list.get(i).getSexStac().equals("РњСѓР¶СЃРєРѕР№"))
 			    	{
 			    		m2++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())>=55 && list.get(i).getSexStac().equals("Женский"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())>=55 && list.get(i).getSexStac().equals("Р–РµРЅСЃРєРёР№"))
 			    	{
 			    		sh2++;
 			    	}
@@ -90,7 +90,7 @@ public class OneStacionar {
 	    public @ResponseBody nsk.tfoms.survay.util.JsonResponse chartpiebetween(@RequestParam String datebegin,String dateend,String userp) throws ParseException
 		  {
 		    	nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-			    // вытаскиваем из базы 
+			    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 			   List<SurvayStacionar> list = stacionarService.getAllbetween(datebegin, dateend,userp);
 
 		    	
@@ -100,19 +100,19 @@ public class OneStacionar {
 			    int m=0,sh=0,m2=0,sh2=0;
 			    for (int i = 0; i < list.size(); i++)
 			    {
-			    	if(Integer.valueOf(list.get(i).getAgeStac())<=59 && list.get(i).getSexStac().equals("Мужской"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())<=59 && list.get(i).getSexStac().equals("РњСѓР¶СЃРєРѕР№"))
 			    	{
 			    		m++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())<=54 && list.get(i).getSexStac().equals("Женский"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())<=54 && list.get(i).getSexStac().equals("Р–РµРЅСЃРєРёР№"))
 			    	{
 			    		sh++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())>=60 && list.get(i).getSexStac().equals("Мужской"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())>=60 && list.get(i).getSexStac().equals("РњСѓР¶СЃРєРѕР№"))
 			    	{
 			    		m2++;
 			    	}
-			    	if(Integer.valueOf(list.get(i).getAgeStac())>=55 && list.get(i).getSexStac().equals("Женский"))
+			    	if(Integer.valueOf(list.get(i).getAgeStac())>=55 && list.get(i).getSexStac().equals("Р–РµРЅСЃРєРёР№"))
 			    	{
 			    		sh2++;
 			    	}
@@ -129,10 +129,10 @@ public class OneStacionar {
 	  { 
 		    
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-			// добовляем запись в базу
+			// РґРѕР±РѕРІР»СЏРµРј Р·Р°РїРёСЃСЊ РІ Р±Р°Р·Сѓ
 			System.out.println("Model add in db "+survaystacionar);
 			stacionarService.add(survaystacionar);
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayStacionar> list = stacionarService.getAll(survaystacionar.getPolzovatelonestac());
 		    for (int i = 0; i < list.size(); i++)
 		    {
@@ -150,7 +150,7 @@ public class OneStacionar {
 		  BigDecimal idBD = new BigDecimal(id.replaceAll(",", ""));
 		  
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayStacionar> list = stacionarService.getOnId(idBD, user);
 		    list.get(0).setDataRespStac(	TimesAndDate.parseDate(list.get(0).getDataRespStac())	);
 		    res.setStatus("SUCCESS");
@@ -163,7 +163,7 @@ public class OneStacionar {
 
 	  { 
 			nsk.tfoms.survay.util.JsonResponse res = new nsk.tfoms.survay.util.JsonResponse();
-		    // вытаскиваем из базы 
+		    // РІС‹С‚Р°СЃРєРёРІР°РµРј РёР· Р±Р°Р·С‹ 
 		    List<SurvayStacionar> list = stacionarService.getAllbetween(datebegin, dateend,userp);
 		    for (int i = 0; i < list.size(); i++)
 		    {
