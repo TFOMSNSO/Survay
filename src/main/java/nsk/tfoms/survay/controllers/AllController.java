@@ -125,7 +125,7 @@ public class AllController
 
 	
 	/**
-     * Method for handling file download request from client Ğ°Ğ±Ğ²
+     * Method for handling file download request from client
      */
     @RequestMapping(value = "/firstPartReport",method = RequestMethod.POST)
     public @ResponseBody nsk.tfoms.survay.util.JsonResponse doDownload(HttpServletRequest request,HttpServletResponse response,
@@ -160,7 +160,7 @@ public class AllController
     		
     	}else if(paramonepart.getKids().equals("true") && paramonepart.getAdult().equals("false")){
     		
-    		//Ã‚Ã®Ã¯Ã°Ã®Ã±
+    		//Âîïğîñ
     		//28.03.2019
     		age_min_0_1 = 0; age_max_0_1 = 13;
     		age_min_0_2 = 0; age_max_0_2 = 13;
@@ -223,15 +223,15 @@ public class AllController
         	{
         		//===================Clinic================================
         		//27.03.2019
-    		    List<SurvayClinicSecondlevel> list01 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list02 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list03 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list04 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4 ,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list01 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list02 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list03 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list04 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4 ,paramonepart.getLpu());
         		
-    		    List<SurvayClinicSecondlevel> list1 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list2 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list3 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©", age_min_3, 10000 ,paramonepart.getLpu());
-    		    List<SurvayClinicSecondlevel> list4 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©", age_min_4, 10000 ,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list1 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list2 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list3 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé", age_min_3, 10000 ,paramonepart.getLpu());
+    		    List<SurvayClinicSecondlevel> list4 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé", age_min_4, 10000 ,paramonepart.getLpu());
     		    
     		    forOneOrgClinic2 = new ArrayList<List<SurvayClinicSecondlevel>>();
     		    //27.03.2019
@@ -252,15 +252,15 @@ public class AllController
     		    
     		    //=============================DayStacionar===============================
     		    //27.03.2019
-    		    List<DayStacionarSecondlevel> list05 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list06 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list07 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list08 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list05 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list06 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list07 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list08 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
     		    
-    		    List<DayStacionarSecondlevel> list5 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list6 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list7 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-    		    List<DayStacionarSecondlevel> list8 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list5 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list6 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list7 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+    		    List<DayStacionarSecondlevel> list8 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
     		    
     		    forOneOrgDayStac2 = new ArrayList<List<DayStacionarSecondlevel>>();
     		   //27.03.2019
@@ -277,15 +277,15 @@ public class AllController
     		    
     		    //=========================================Stacionar==========================
     		    //27.03.2019
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list09 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list010 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list011 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list012 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list09 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list010 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list011 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list012 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
     		    
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list9 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list10 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list11 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list12 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list9 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list10 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list11 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+    		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list12 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 
     		    forOneOrgStac2 = new ArrayList<List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel>>();
     		    //27.03.2019
@@ -310,15 +310,15 @@ public class AllController
     	{
     		//===================Clinic================================
     		//29.03.2019
-    		List<SurvayClinic> list01 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<SurvayClinic> list02 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<SurvayClinic> list03 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<SurvayClinic> list04 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+    		List<SurvayClinic> list01 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<SurvayClinic> list02 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<SurvayClinic> list03 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<SurvayClinic> list04 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
     		
-		    List<SurvayClinic> list1 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<SurvayClinic> list2 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<SurvayClinic> list3 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<SurvayClinic> list4 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<SurvayClinic> list1 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<SurvayClinic> list2 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<SurvayClinic> list3 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<SurvayClinic> list4 = personSvc.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 		    
 		    forOneOrgClinic = new ArrayList<List<SurvayClinic>>();
 		  //29.03.2019
@@ -334,15 +334,15 @@ public class AllController
 
 		    //=============================DayStacionar===============================
 		    //29.03.2019
-		    List<SurvayDaystacionar> list05 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list06 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list07 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list08 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list05 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list06 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list07 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list08 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
 		    
-		    List<SurvayDaystacionar> list5 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list6 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list7 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<SurvayDaystacionar> list8 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list5 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list6 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list7 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<SurvayDaystacionar> list8 = daystacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 		    
 		    forOneOrgDayStac = new ArrayList<List<SurvayDaystacionar>>();
 		    //29.03.2019
@@ -359,15 +359,15 @@ public class AllController
 		    
 		    //=========================================Stacionar==========================
 		    //29.03.2019
-		    List<SurvayStacionar> list09 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<SurvayStacionar> list010 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<SurvayStacionar> list011 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<SurvayStacionar> list012 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+		    List<SurvayStacionar> list09 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<SurvayStacionar> list010 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<SurvayStacionar> list011 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<SurvayStacionar> list012 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
 		    
-		    List<SurvayStacionar> list9 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<SurvayStacionar> list10 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<SurvayStacionar> list11 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<SurvayStacionar> list12 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<SurvayStacionar> list9 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<SurvayStacionar> list10 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<SurvayStacionar> list11 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<SurvayStacionar> list12 = stacionarservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 
 		    forOneOrgStac = new ArrayList<List<SurvayStacionar>>();
 		    //29.03.2019
@@ -387,7 +387,7 @@ public class AllController
     	}
     	else
     	{
-    		// Ã°Ã¥Ã Ã«Ã¨Ã§Ã Ã¶Ã¨Ã¿ Ã¤Ã«Ã¿ Ã¢Ã»Ã¤Ã¥Ã«Ã¥Ã­Ã­Ã»Ãµ Ã­Ã¥Ã±ÃªÃ®Ã«Ã¼ÃªÃ®Ãµ checkbox'Ã®Ã¢  Ã²Ã´Ã®Ã¬Ã± Ã¨Ã­Ã£Ã®Ã±
+    		// ğåàëèçàöèÿ äëÿ âûäåëåííûõ íåñêîëüêîõ checkbox'îâ  òôîìñ èíãîñ
     	}
 	    
     	
@@ -468,7 +468,7 @@ public class AllController
         
     }
     
-  //07.05.2019 Ã­Ã Ã·
+  //07.05.2019 íà÷
     @RequestMapping(value = "/slcbPartTwoReport2",method = RequestMethod.POST)
     public @ResponseBody nsk.tfoms.survay.util.JsonResponse secondReport2(HttpServletRequest request,HttpServletResponse response,
     		@RequestBody ParamTwoPart paramtwopart) throws IOException, ClassNotFoundException, SQLException, JRException {
@@ -491,7 +491,7 @@ public class AllController
         
     }
     
-//07.05.2019 ÃªÃ®Ã­
+//07.05.2019 êîí
 
 
     
@@ -500,12 +500,12 @@ public class AllController
         downloadFile(request, response, request.getServletContext().getRealPath("/resources/clinic_report.xls"));
 	}
     
-  //07.05.2019 Ã­Ã Ã·
+  //07.05.2019 íà÷
     @RequestMapping(value = "/report_big_clinic2", method = RequestMethod.GET)
     public void report_1_12(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         downloadFile(request, response, request.getServletContext().getRealPath("/resources/clinic_report2.xls"));
 	}
-//07.05.2019 ÃªÃ®Ã­
+//07.05.2019 êîí
 
 
 
@@ -545,7 +545,7 @@ public class AllController
         
     }
     
-  //13.05.2019 Ã­Ã Ã· 
+  //13.05.2019 íà÷ 
     @RequestMapping(value = "/sldsbPartTwoReport2",method = RequestMethod.POST)
        public @ResponseBody nsk.tfoms.survay.util.JsonResponse secondReportdsb2(HttpServletRequest request,HttpServletResponse response,
        		@RequestBody ParamTwoPart paramtwopart) throws IOException, ClassNotFoundException, SQLException, JRException {
@@ -569,14 +569,14 @@ public class AllController
    		return res; 
            
        }
-   //13.05.2019 ÃªÃ®Ã­
+   //13.05.2019 êîí
 
-  //13.05.2019 Ã­Ã Ã·    
+  //13.05.2019 íà÷    
     @RequestMapping(value = "/report_big_ds2", method = RequestMethod.GET)
        public void report_1_22(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
            downloadFile(request, response, request.getServletContext().getRealPath("/resources/ds_report2.xls"));
    	}
-   //13.05.2019 ÃªÃ®Ã­   
+   //13.05.2019 êîí   
 
   
     
@@ -607,7 +607,7 @@ public class AllController
         
     }
     
-  //15.05.2019 Ã­Ã Ã·
+  //15.05.2019 íà÷
     @RequestMapping(value = "/slsbPartTwoReport2",method = RequestMethod.POST)
     public @ResponseBody nsk.tfoms.survay.util.JsonResponse secondReportsb2(HttpServletRequest request,HttpServletResponse response,
     		@RequestBody ParamTwoPart paramtwopart) throws IOException, ClassNotFoundException, SQLException, JRException {
@@ -631,16 +631,16 @@ public class AllController
 		return res; 
         
     }
-//15.05.2019 ÃªÃ®Ã­
+//15.05.2019 êîí
 
-  //15.05.2019 Ã­Ã Ã·
+  //15.05.2019 íà÷
     @RequestMapping(value = "/report_big_s2", method = RequestMethod.GET)
     public void report_1_32(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         downloadFile(request, response, request.getServletContext().getRealPath("/resources/s_report2.xls"));
 	}
-//15.05.2019 ÃªÃ®Ã­
+//15.05.2019 êîí
    
-  //05.06.2019 Ã­Ã Ã·
+  //05.06.2019 íà÷
     @RequestMapping(value = "/slsbPartTwoReport3",method = RequestMethod.POST)
     public @ResponseBody nsk.tfoms.survay.util.JsonResponse secondReportsb3(HttpServletRequest request,HttpServletResponse response,
     		@RequestBody ParamTwoPart paramtwopart) throws IOException, ClassNotFoundException, SQLException, JRException {
@@ -663,14 +663,14 @@ public class AllController
 		return res; 
         
     }
-//05.06.2019 ÃªÃ®Ã­
+//05.06.2019 êîí
 
-  //05.06.2019 Ã­Ã Ã·
+  //05.06.2019 íà÷
     @RequestMapping(value = "/report_big_s3", method = RequestMethod.GET)
     public void report_1_33(HttpServletRequest request, HttpServletResponse response) throws SQLException, ServletException, IOException {
         downloadFile(request, response, request.getServletContext().getRealPath("/resources/interviewed_lpu.xls"));
 	}
-//15.06.2019 ÃªÃ®Ã­
+//15.06.2019 êîí
 
     
 
@@ -776,15 +776,15 @@ public class AllController
     	{
     		//===================Clinic================================
     		//29.03.2019
-		    List<SurvayClinicSecondlevel> list01 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list02 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list03 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list04 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list01 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list02 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list03 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list04 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
     		
-		    List<SurvayClinicSecondlevel> list1 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list2 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list3 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<SurvayClinicSecondlevel> list4 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list1 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list2 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list3 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<SurvayClinicSecondlevel> list4 = dssl.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 		    
 		    forOneOrgClinic = new ArrayList<List<SurvayClinicSecondlevel>>();
 		    //29.03.2019
@@ -800,15 +800,15 @@ public class AllController
 		    
 		    //=============================DayStacionar===============================
 		    //29.03.2019
-		    List<DayStacionarSecondlevel> list05 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list06 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list07 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list08 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list05 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list06 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list07 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list08 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
 		    
-		    List<DayStacionarSecondlevel> list5 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list6 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list7 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<DayStacionarSecondlevel> list8 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list5 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list6 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list7 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<DayStacionarSecondlevel> list8 = DayStacionarSecondlevel.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 		    
 		    forOneOrgDayStac = new ArrayList<List<DayStacionarSecondlevel>>();
 		    //29.03.2019
@@ -825,15 +825,15 @@ public class AllController
 		    
 		    //=========================================Stacionar==========================
 		    //29.032019
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list09 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_1, age_max_0_1,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list010 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_2, age_max_0_2,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list011 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_0_3, age_max_0_3,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list012 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_0_4, age_max_0_4,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list09 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_1, age_max_0_1,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list010 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_2, age_max_0_2,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list011 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_0_3, age_max_0_3,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list012 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_0_4, age_max_0_4,paramonepart.getLpu());
 		    
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list9 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_1, age_max_1,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list10 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_2, age_max_2,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list11 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "ÃŒÃ³Ã¦Ã±ÃªÃ®Ã©",age_min_3, 10000,paramonepart.getLpu());
-		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list12 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ã†Ã¥Ã­Ã±ÃªÃ¨Ã©",age_min_4, 10000,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list9 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_1, age_max_1,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list10 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_2, age_max_2,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list11 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Ìóæñêîé",age_min_3, 10000,paramonepart.getLpu());
+		    List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel> list12 = sslservice.getReport(paramonepart.getDatestart(), paramonepart.getDateend(), parseorg(paramonepart), "Æåíñêèé",age_min_4, 10000,paramonepart.getLpu());
 
 		    forOneOrgStac = new ArrayList<List<nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel>>();
 		    //29.03.2019
@@ -853,7 +853,7 @@ public class AllController
     	}
     	else
     	{
-    		// Ã°Ã¥Ã Ã«Ã¨Ã§Ã Ã¶Ã¨Ã¿ Ã¤Ã«Ã¿ Ã¢Ã»Ã¤Ã¥Ã«Ã¥Ã­Ã­Ã»Ãµ Ã­Ã¥Ã±ÃªÃ®Ã«Ã¼ÃªÃ®Ãµ checkbox'Ã®Ã¢  Ã²Ã´Ã®Ã¬Ã± Ã¨Ã­Ã£Ã®Ã±
+    		// ğåàëèçàöèÿ äëÿ âûäåëåííûõ íåñêîëüêîõ checkbox'îâ  òôîìñ èíãîñ
     	}
 
 	    
