@@ -1,0 +1,54 @@
+-- Create table
+create table SURVAY_CLINIC
+(
+  ID                  NUMBER not null,
+  AGE                 VARCHAR2(255),
+  AMBULANCE           VARCHAR2(255),
+  CLINIC_DOCTOR       VARCHAR2(255),
+  DATA_INPUT          DATE,
+  DATA_RESP           DATE,
+  DIAGNOSTIC_TESTS    VARCHAR2(255),
+  EQUIPMENT           VARCHAR2(255),
+  FREE_HELP           VARCHAR2(255),
+  LABORATORY_RESEARCH VARCHAR2(255),
+  MEDICAL_SPECIALISTS VARCHAR2(255),
+  POLZOVATEL          VARCHAR2(255),
+  QUALITY_AMBULANCE   VARCHAR2(255),
+  REPAIRS             VARCHAR2(255),
+  SEE_A_DOCTOR        VARCHAR2(255),
+  SEX                 VARCHAR2(255),
+  THERAPIST           VARCHAR2(255),
+  WAITING_TIME        VARCHAR2(255),
+  WAITING_TIME_2      VARCHAR2(255),
+  MO                  VARCHAR2(255)
+)
+tablespace TABLES_MINOR
+  pctfree 10
+  initrans 1
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Add comments to the columns 
+comment on column SURVAY_CLINIC.MO
+  is 'ìåä ó÷ðåæäåíèå ãäå ïðîâîäèëñÿ îïðîñ';
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table SURVAY_CLINIC
+  add primary key (ID)
+  using index 
+  tablespace TABLES_MINOR
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+

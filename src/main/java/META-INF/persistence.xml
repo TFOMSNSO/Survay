@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Survay" transaction-type="RESOURCE_LOCAL">
+		<provider>org.hibernate.ejb.HibernatePersistence</provider>
+		<class>nsk.tfoms.survay.entity.SurvayClinic</class>
+		<class>nsk.tfoms.survay.entity.SurvayDaystacionar</class>
+		<class>nsk.tfoms.survay.entity.SurvayStacionar</class>
+		
+		<class>nsk.tfoms.survay.entity.secondlevel.Clinic.SurvayClinicSecondlevel</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Clinic.SurvayClinicSec1</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Clinic.SurvayClinicSec25</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Clinic.SurvayClinicSec2</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Clinic.QuestionManyClinic</class>
+		
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.DayStacionarSecondlevel</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.QuestionManyDayStacionar</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.SurvayClinicDayStacionarSec1</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.SCDSSLSec2</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.SCDSSLSec15</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.DayStacionar.SCDSSLSec25</class>
+		
+		<class>nsk.tfoms.survay.entity.secondlevel.Stacionar.StacionarSecondlevel</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Stacionar.SCSSLSec1</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Stacionar.QuestionManyStacionar</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Stacionar.SCSSLSec2</class>
+		<class>nsk.tfoms.survay.entity.secondlevel.Stacionar.SCSSLSec3</class>	
+		
+		<properties>
+        <property name="hibernate.dialect" value="org.hibernate.dialect.OracleDialect"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
+        <property name="hibernate.connection.charSet" value="UTF-8"/>
+	<property name="eclipselink.jdbc.batch-writing" value="Oracle-JDBC"/>
+        <property name="javax.persistence.jdbc.url" value="jdbc:oracle:thin:@srv-oracle03:1521:olimp"/>
+        <property name="javax.persistence.jdbc.user" value="petit"/>
+        <property name="javax.persistence.jdbc.password" value="asu"/>
+        <property name="javax.persistence.jdbc.driver" value="oracle.jdbc.OracleDriver"/>
+        <property name="hibernate.show_sql" value="true" />
+         
+<!--         <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect"/>
+        <property name="hibernate.hbm2ddl.auto" value="update"/>
+        <property name="hibernate.ejb.naming_strategy" value="org.hibernate.cfg.ImprovedNamingStrategy"/>
+        <property name="hibernate.connection.charSet" value="UTF-8"/>         -->
+    </properties>
+		
+	</persistence-unit>
+</persistence>

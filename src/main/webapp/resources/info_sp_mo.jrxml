@@ -1,0 +1,986 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4_1" pageWidth="1609" pageHeight="842" columnWidth="1569" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="72446202-7d66-432c-94ea-1c6fded70490">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="dateBegin" class="java.lang.String"/>
+	<parameter name="dateEnd" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select d.* ,
+            rownum f0,
+            nvl(f.mo, (select mo from t_mo t where t.mo_id = idlpu)) f1,
+            
+            smo_code_name f2,
+            kol_insur f3,
+            
+            ' ' f4,
+             nvl(f5,0) f5,
+            nvl(f6,0) f6, 
+            nvl(f7,0) f7, 
+            nvl(f8,0) f8, 
+            nvl(f9,0) f9,
+            nvl(f10,0) f10,
+            nvl(f11,0) f11,
+            nvl(f12,0) f12,
+            nvl(f13,0) f13,
+            nvl(f14,0) f14,
+            nvl(f15,0) f15,
+            nvl(f16,0) f16,
+            nvl(f17,0) f17
+            from
+( select   distinct  d.idlpu, d.smo_code_name, d.kol_insur from   t_spr_otchet100  d  ) d left join
+(
+
+  SELECT w.mo,p.mo_id,
+
+            sum(case when t.regname=p.username or t.regname!=p.username THEN 1 END) f5,--5
+            sum(case when t.regname=p.username THEN 1 END) f6,--6
+            sum(case when t.regname!=p.username THEN 1 END) f7,--7
+
+            sum(case when p.cause_id IN (22,1) THEN 1 END) f8, --8
+            sum(case when cause_id in (24,23,25,3,2,4) THEN 1 END) f9, --9
+            sum(case when cause_id in (26,5) THEN 1 END) f10, --10
+            sum(case when cause_id in (27,6) THEN 1 END) f11, --11
+            sum(case when cause_id in (28,8) THEN 1 END) f12, --12
+            sum(case when cause_id in (29,9) THEN 1 END) f13, --13
+            sum(case when cause_id in (30,10) THEN 1 END) f14, --14
+            sum(case when cause_id in (31,11) THEN 1 END) f15, --15
+            sum(case when cause_id in (33,13) THEN 1 END) f16, --16
+            sum(case when cause_id in (32,34,35,36,7,15,16) THEN 1 END) f17 --17
+
+
+FROM t_block_ger t, t_petit p, t_mo w , t_spr_otchet100 s_100
+  WHERE t.id_ger=p.id
+  AND p.mo_id=w.mo_id
+  AND p.conect_id=5
+  AND to_date(t.date_end) BETWEEN $P{dateBegin} AND $P{dateEnd}
+  AND p.mo_id =s_100.idlpu
+  AND p.otv_kon=s_100.smo_code
+group by w.mo,p.mo_id) f on (f.mo_id = d.idlpu)
+--order by idlpu
+
+UNION
+
+  SELECT 
+    
+           cast(null as number) idlpu,
+           cast(null as varchar2(1000)) smo_code_name,
+           cast(null as number) kol_insur,
+           cast(null as number) f0,
+
+''f1,
+''f2,
+--'0'f3, 
+cast(null as number) f3,
+' 'f4,
+
+            sum(case when t.regname=p.username or t.regname!=p.username THEN 1 END) f5,--5
+            sum(case when t.regname=p.username THEN 1 END) f6,--6
+            sum(case when t.regname!=p.username THEN 1 END) f7,--7
+
+            sum(case when p.cause_id IN (22,1) THEN 1 END) f8, --8
+            sum(case when cause_id in (24,23,25,3,2,4) THEN 1 END) f9, --9
+            sum(case when cause_id in (26,5) THEN 1 END) f10, --10
+            sum(case when cause_id in (27,6) THEN 1 END) f11, --11
+            sum(case when cause_id in (28,8) THEN 1 END) f12, --12
+            sum(case when cause_id in (29,9) THEN 1 END) f13, --13
+            sum(case when cause_id in (30,10) THEN 1 END) f14, --14
+            sum(case when cause_id in (31,11) THEN 1 END) f15, --15
+            sum(case when cause_id in (33,13) THEN 1 END) f16, --16
+            sum(case when cause_id in (32,34,35,36,7,15,16) THEN 1 END) f17 --17
+
+
+
+FROM t_block_ger t, t_petit p, t_mo w , t_spr_otchet100 s_100
+  WHERE t.id_ger=p.id
+  AND p.mo_id=w.mo_id
+  AND p.conect_id=5
+  AND to_date(t.date_end) BETWEEN $P{dateBegin} AND $P{dateEnd}
+  AND p.mo_id =s_100.idlpu
+  AND p.otv_kon=s_100.smo_code
+--group by w.mo,p.mo_id) f on (f.mo_id = d.idlpu)
+--order by idlpu
+order by f1
+]]>
+	</queryString>
+	<field name="f1" class="java.lang.String"/>
+	<field name="f2" class="java.lang.String"/>
+	<field name="f3" class="java.lang.String"/>
+	<field name="f4" class="java.lang.String"/>
+	<field name="f5" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="f6" class="java.lang.String"/>
+	<field name="f7" class="java.lang.String"/>
+	<field name="f8" class="java.lang.String"/>
+	<field name="f9" class="java.lang.String"/>
+	<field name="f10" class="java.lang.String"/>
+	<field name="f11" class="java.lang.String"/>
+	<field name="f12" class="java.lang.String"/>
+	<field name="f13" class="java.lang.String"/>
+	<field name="f14" class="java.lang.String"/>
+	<field name="f15" class="java.lang.String"/>
+	<field name="f16" class="java.lang.String"/>
+	<field name="f17" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="177" splitType="Stretch">
+			<textField>
+				<reportElement x="240" y="20" width="70" height="20" uuid="b5b0ba6f-40f1-4cbb-84c0-98bdf5235db8"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateBegin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="20" width="20" height="20" uuid="f4603b69-5e3c-4ae3-89fb-c26b462d0624"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["по"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="20" width="100" height="20" uuid="deda90ce-31e3-4425-9f10-e5a028983f11"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Dotted"/>
+					<leftPen lineWidth="0.0" lineStyle="Dotted"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dateEnd}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1360" y="160" width="70" height="17" uuid="4e227c3f-cc2e-478c-8c63-f19d552f4b5d"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[15]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="160" width="100" height="17" uuid="534bec32-48d3-4f18-89b2-337c926598e4"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[3]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="50" width="80" height="110" uuid="b7a8d37b-2918-4ffe-97af-f21cf0e49c0a"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Принято обращений с начала проекта]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1430" y="70" width="70" height="90" uuid="961f25b5-4cd0-4a5a-ae3f-4fa264494da7"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[о взимании денежных средств за медицинскую помощь по программам ОМС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1430" y="160" width="70" height="17" uuid="6eb88183-c187-4bd9-bb5d-2364bcda4261"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[16]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="940" y="70" width="70" height="90" uuid="26d564b7-9f28-41ba-9c4f-cee013222030"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[о выборе врача, МО в сфере ОМС, выборе или замене СМО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1220" y="70" width="70" height="90" uuid="f6c0e7cf-d080-4da1-ae05-98840cc2e0ab"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[о качестве медицинской помощи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1220" y="160" width="70" height="17" uuid="6039fa89-1e8a-428a-b278-4ee66036f82c"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[13]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="50" width="130" height="20" uuid="a3db20c5-7d35-4880-a065-99dcdc4c27e7"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[из них:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1010" y="70" width="70" height="90" uuid="94639a52-5574-4170-b315-84cb0071d6d3"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[об организации работы МО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1290" y="70" width="70" height="90" uuid="a42c2ee5-328a-4f4c-a114-02223017e08b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[о лекарственном обеспечении при оказании медицинской помощи]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="160" width="220" height="17" uuid="02cd5c6d-853a-4188-b021-19f13ecc3f0b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="50" width="220" height="110" uuid="6fd3239f-6d4e-43cf-8310-1e73026041ca"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Наименование страховой медицинской организации]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="790" y="70" width="80" height="90" uuid="df51e88d-d564-4471-8202-543753c6665b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[переадресовано СП более высокого уровня]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="460" y="50" width="100" height="110" uuid="faebab98-dd34-46dc-897e-c9155225516d"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Количество страховых представителей, работающих в медицинской организации]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1360" y="70" width="70" height="90" uuid="bc00a6fc-db50-4253-8d94-78b1674db6b8"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[об отказе в оказании медицинской помощи по программам ОМС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1290" y="160" width="70" height="17" uuid="beaa4f3c-7592-4dbd-8549-c53778e85b75"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1150" y="70" width="70" height="90" uuid="52a42d6b-609d-49af-9c7b-4ca1e56d3841"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[об этике и деонтологии медицинских работников]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="50" width="20" height="110" uuid="fcdd2257-c0bd-4204-a2ac-b9aa16a3196d"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="940" y="160" width="70" height="17" uuid="ddbd04e3-f623-4062-a84f-556c44b9b997"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[9]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="790" y="160" width="80" height="17" uuid="888aec90-679c-46bf-adf8-30e05f0009e7"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[7]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="160" width="20" height="17" uuid="5e219612-fd83-4af6-99bb-e7c0da3d467a"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement>
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[ 0]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="50" width="100" height="110" uuid="814950e8-bab0-4b79-bcae-d52052a3cad6"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Формат работы страховых представителей (пост/визит/телефон прямой связи)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1080" y="160" width="70" height="17" uuid="bd84d9c8-b727-4f2c-b281-960e86b9341e"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[11]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="70" width="70" height="90" uuid="ef52d072-44b4-493c-9092-644d43e1cfab"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[об обеспечении полисами ОМС]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="160" width="70" height="17" uuid="edb56e8d-8538-4b6c-891a-c21d5a7e2d30"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[8]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1010" y="160" width="70" height="17" uuid="a942919a-0c6d-4720-add0-4e48f3ce9b2e"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[10]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="660" y="160" width="80" height="17" uuid="c587393f-4e96-47a5-bde8-d0d042a1fded"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[5]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1150" y="160" width="70" height="17" uuid="29a2ad27-a2ae-41b3-96c4-d3aa2ad0c0d2"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[12]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="560" y="160" width="100" height="17" uuid="fb3a97bd-8606-4bb7-abbf-cd760067c6fa"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[4]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="70" width="50" height="90" uuid="0f4f6f03-62ea-40d1-9fa0-cfdeaa1bd41e"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[закрыто]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="740" y="160" width="50" height="17" uuid="ef8bbe39-fedc-4c71-97cd-5c5d57fcd34c"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[6]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1080" y="70" width="70" height="90" uuid="e8a930e0-3733-47c3-994a-60eade5f25fc"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[о санитарно-гигиеническом состоянии МО]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="870" y="50" width="700" height="20" uuid="4a16e0a9-1ed5-48c1-8644-25d06ca7a160"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Основные причины обращения к страховым представителям]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1500" y="70" width="70" height="90" uuid="123867cb-fece-4d9f-bae2-7d7187378ab4"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[другие]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="240" y="160" width="220" height="17" uuid="d482da9e-2d18-4d31-a4dc-bde0740fdd11"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[2]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="50" width="220" height="110" uuid="873ede81-3b18-4672-97ba-aa3a5bba9714"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[Наименование медицинской организации, участвующей в проекте]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1500" y="160" width="70" height="17" uuid="fa2d397c-d61b-4478-83aa-4c4ddaa8a4fb"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<text><![CDATA[17]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="0" width="1570" height="20" uuid="ec185d07-9ea7-4214-a3c6-b12735217e19"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.0" lineStyle="Dotted" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Dotted" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Dotted" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineStyle="Dotted" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Сведения о работе страховых медицинских организаций в рамках проекта «Создание новой модели медицинской организации, оказывающей первичную медико-санитарную помощь»"]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1010" y="0" width="70" height="35" uuid="1ee60068-5e29-4edb-816d-5c5358b2fe24"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f10}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="870" y="0" width="70" height="35" uuid="8d305a2c-205c-4717-b3d2-b37e1546804e"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f8}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1500" y="0" width="70" height="35" uuid="0475452b-b0a3-4229-81c6-49cc670fd1c3"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f17}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="660" y="0" width="80" height="35" uuid="09f6d346-5201-4522-81bc-3eb81e74107c"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f5}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="560" y="0" width="100" height="35" uuid="510f44b6-7954-4f66-a450-d2e41086ff42"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f4}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1150" y="0" width="70" height="35" uuid="82910b6a-9431-4e67-a69a-cc3fdafb32f1"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f12}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="790" y="0" width="80" height="35" uuid="8f74189b-1a9e-463a-9de9-c5b6681c663b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f7}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1360" y="0" width="70" height="35" uuid="e3465127-55a8-4109-81ac-76aa2440a873"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f15}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="740" y="0" width="50" height="35" uuid="56f6ba13-ecbb-4a94-a926-da241de4f148"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f6}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1290" y="0" width="70" height="35" uuid="be0b38a8-b7e5-4611-9638-85f1efdf7232"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f14}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="460" y="0" width="100" height="35" uuid="28cc073f-b7e8-4c17-a108-da0a2a20381b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f3}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="240" y="0" width="220" height="35" uuid="da706c69-70a3-4aca-a9d6-f4f55c471a4c"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="940" y="0" width="70" height="35" uuid="430c3d5c-427a-4f91-8446-7e4775df78ab"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f9}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1220" y="0" width="70" height="35" uuid="2288da85-b37c-45b5-969d-0e15e296f51d"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f13}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1080" y="0" width="70" height="35" uuid="2fedc589-3ab9-4638-9aeb-12136398745a"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f11}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="1430" y="0" width="70" height="35" uuid="63d2a4bd-effa-4e9b-8559-4042b883621b"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Right">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f16}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="20" y="0" width="220" height="35" uuid="f54e07b6-010b-4aab-81d9-42f516189c24"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{f1}
+
+]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="RelativeToBandHeight" mode="Transparent" x="0" y="0" width="20" height="35" uuid="372f7777-5225-4adb-b48c-c59cc96086db"/>
+				<box>
+					<pen lineWidth="0.1" lineStyle="Dotted"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center">
+					<font fontName="Arial"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

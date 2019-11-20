@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:mvc="http://www.springframework.org/schema/mvc"
+  xmlns:tx="http://www.springframework.org/schema/tx"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+		http://www.springframework.org/schema/mvc
+    	http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd">
+		
+	
+	  <mvc:annotation-driven/>
+  
+  <context:component-scan base-package="nsk.tfoms.survay.controllers" />
+	<context:component-scan base-package="nsk.tfoms.survay.entity" />
+	<context:component-scan base-package="nsk.tfoms.survay.service" />
+	
+	
+	<!-- Всю статику (изображения, css-файлы, javascript) положим в папку webapp/resources 
+		и замаппим их на урл вида /resources/** -->
+		<mvc:resources mapping="/resources/**" location="/resources/" />
+  
+  <!-- Resolve view name into jsp file located on /WEB-INF -->
+  <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+    <property name="prefix" value="/WEB-INF/views/" />
+    <property name="suffix" value=".jsp" />
+  </bean>
+  
+ <!-- MySQL Datasource with Commons DBCP connection pooling -->
+  <bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource">
+    <property name="driverClassName" value="oracle.jdbc.OracleDriver"/>
+    <property name="url" value="jdbc:oracle:thin:@srv-oracle03:1521/olimp"/>
+    <property name="username" value="petit"/>
+    <property name="password" value="asu"/>
+  </bean> 
+ <!-- MySQL Datasource with Commons DBCP connection pooling 
+  <bean class="org.apache.commons.dbcp.BasicDataSource" id="dataSource">
+    <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+    <property name="url" value="jdbc:mysql://localhost:3306/mybtest2"/>
+    <property name="username" value="root"/>
+    <property name="password" value="root"/>
+  </bean>-->
+  
+  <!-- EntityManagerFactory -->
+  <bean class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" id="entityManagerFactory">
+    <property name="persistenceUnitName" value="Survay"/>
+    <property name="dataSource" ref="dataSource"/>
+  </bean>
+  
+  <!-- Transaction Manager -->
+  <bean class="org.springframework.orm.jpa.JpaTransactionManager" id="transactionManager">
+    <property name="entityManagerFactory" ref="entityManagerFactory"/>
+  </bean>
+  
+       
+  
+  <!-- Enable @Transactional annotation -->
+  <tx:annotation-driven/>
+
+  <mvc:default-servlet-handler />
+	
+	
+	
+	
+</beans>

@@ -1,0 +1,34 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<http auto-config="true">
+	
+		<intercept-url pattern="/" access="ROLE_SMO,ROLE_TFOMS" />
+		<intercept-url pattern="/general" access="ROLE_SMO,ROLE_TFOMS" />
+		<intercept-url pattern="/general/*" access="ROLE_SMO,ROLE_TFOMS" />
+		<intercept-url pattern="/general*" access="ROLE_SMO,ROLE_TFOMS" />
+		
+		<form-login login-page="/login" default-target-url="/general" authentication-failure-url="/loginfailed" />
+		<logout logout-success-url="/logout" />
+		
+		
+		<anonymous username="guest" granted-authority="ROLE_ANONYMOUS" />
+		<remember-me />
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+		
+			<user-service>
+				 <user name="smo_simaz" password="uyt765" authorities="ROLE_SMO" />
+				<user name="smo_rosno" password="wer456" authorities="ROLE_SMO" />
+				<user name="smo_ingos" password="rty579" authorities="ROLE_SMO" />
+				 <user name="tfoms" password="zxc234" authorities="ROLE_TFOMS" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>
